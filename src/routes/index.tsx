@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import ernaehrungBg from "@/assets/ernaehrung-bg.jpg";
 import massageBg from "@/assets/massage-bg.jpg";
+import schroepfenBg from "@/assets/schroepfen-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -81,7 +82,7 @@ function HomePage() {
               { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.", bg: massageBg },
               { title: "Ernährungsberatung", desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.", bg: ernaehrungBg },
               { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.", bg: undefined },
-              { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: undefined },
+              { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: schroepfenBg },
               { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.", bg: undefined },
               { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: undefined },
               { title: "Entgiftung", desc: "Begleitung durch ein Entgiftungsprogramm zur Ausscheidung von Giftstoffen.", bg: undefined },
