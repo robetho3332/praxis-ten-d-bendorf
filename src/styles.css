@@ -50,8 +50,8 @@
   --color-pastel-sage: var(--pastel-sage);
   --color-pastel-cream: var(--pastel-cream);
   --color-pastel-lavender: var(--pastel-lavender);
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
+  --font-heading: "Open Sans", sans-serif;
+  --font-body: "Open Sans", sans-serif;
 }
 
 :root {
