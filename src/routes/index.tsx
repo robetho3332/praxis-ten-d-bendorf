@@ -86,7 +86,7 @@ function HomePage() {
               <Link
                 key={s.title}
                 to="/methoden"
-                className="group bg-card p-6 shadow-sm border border-border transition-all hover:shadow-md rounded-full"
+                className="group flex flex-col items-center justify-center text-center bg-card shadow-sm border border-border transition-all hover:shadow-md rounded-full aspect-square p-6"
               >
                 <h3 className="font-heading text-lg font-semibold text-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
