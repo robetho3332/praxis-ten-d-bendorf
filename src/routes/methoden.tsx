@@ -26,7 +26,7 @@ const therapies = [
   },
   {
     title: "Pflanzenheilkunde",
-    description: "„Gegen jede Krankheit ist ein Kraut gewachsen" – Seit Jahrhunderten ist die Pflanzenheilkunde Teil der Therapien auf der ganzen Welt. Tinkturen, Tees und pulverisierte Pflanzenteile sind oft Teil meines individuell auf dich abgestimmten Therapiekonzepts.",
+    description: "«Gegen jede Krankheit ist ein Kraut gewachsen» \u2013 Seit Jahrhunderten ist die Pflanzenheilkunde Teil der Therapien auf der ganzen Welt. Tinkturen, Tees und pulverisierte Pflanzenteile sind oft Teil meines individuell auf dich abgestimmten Therapiekonzepts.",
     icon: "🌿",
   },
   {
