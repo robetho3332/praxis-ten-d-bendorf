@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import ernaehrungBg from "@/assets/ernaehrung-bg.jpg";
+import massageBg from "@/assets/massage-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -77,7 +78,7 @@ function HomePage() {
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.", bg: undefined },
+              { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.", bg: massageBg },
               { title: "Ernährungsberatung", desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.", bg: ernaehrungBg },
               { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.", bg: undefined },
               { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: undefined },
