@@ -3,6 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import ernaehrungBg from "@/assets/ernaehrung-bg.jpg";
 import massageBg from "@/assets/massage-bg.jpg";
 import schroepfenBg from "@/assets/schroepfen-bg.jpg";
+import pflanzenheilkundeBg from "@/assets/pflanzenheilkunde-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
