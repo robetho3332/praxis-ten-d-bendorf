@@ -12,6 +12,7 @@ import darmsanierungBg from "@/assets/darmsanierung-bg.jpg";
 import hormonberatungBg from "@/assets/hormonberatung-bg.jpg";
 import vitalstoffberatungBg from "@/assets/vitalstoffberatung-bg.jpg";
 import ohrreflextherapieBg from "@/assets/ohrreflextherapie-bg.jpg";
+import schmerztherapieBg from "@/assets/schmerztherapie-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,7 +100,7 @@ function HomePage() {
               { title: "Hormonberatung", desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.", bg: hormonberatungBg },
               { title: "Vitalstoffberatung", desc: "Gezielte Empfehlung von Vitaminen und Mineralstoffen zur Unterstützung.", bg: vitalstoffberatungBg },
               { title: "Ohrreflextherapie", desc: "Therapie über Reflexpunkte am Ohr zur Unterstützung der Heilung.", bg: ohrreflextherapieBg },
-              { title: "Manuelle Schmerztherapie", desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.", bg: undefined },
+              { title: "Manuelle Schmerztherapie", desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.", bg: schmerztherapieBg },
               { title: "Baunscheidtieren", desc: "Alte Therapiemethode zur Mobilisierung der Selbstheilungskräfte über die Haut.", bg: undefined },
               { title: "Blutegeltherapie", desc: "Einsatz bei Venenleiden, Arthrosen und Sehnenscheidenentzündungen.", bg: blutegeltherapieBg },
               { title: "Laboranalysen", desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.", bg: undefined },
