@@ -8,6 +8,7 @@ import fussreflexzonenBg from "@/assets/fussreflexzonen-bg.jpg";
 import dorntherapieBg from "@/assets/dorntherapie-bg.jpg";
 import blutegeltherapieBg from "@/assets/blutegeltherapie-bg.jpg";
 import entgiftungBg from "@/assets/entgiftung-bg.jpg";
+import darmsanierungBg from "@/assets/darmsanierung-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -91,7 +92,7 @@ function HomePage() {
               { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.", bg: fussreflexzonenBg },
               { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: dorntherapieBg },
               { title: "Entgiftung", desc: "Begleitung durch ein Entgiftungsprogramm zur Ausscheidung von Giftstoffen.", bg: entgiftungBg },
-              { title: "Darmsanierung", desc: "Aufbau eines gesunden Darmmikrobioms in mehreren Phasen.", bg: undefined },
+              { title: "Darmsanierung", desc: "Aufbau eines gesunden Darmmikrobioms in mehreren Phasen.", bg: darmsanierungBg },
               { title: "Hormonberatung", desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.", bg: undefined },
               { title: "Vitalstoffberatung", desc: "Gezielte Empfehlung von Vitaminen und Mineralstoffen zur Unterstützung.", bg: undefined },
               { title: "Ohrreflextherapie", desc: "Therapie über Reflexpunkte am Ohr zur Unterstützung der Heilung.", bg: undefined },
