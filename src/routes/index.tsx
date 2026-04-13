@@ -14,6 +14,7 @@ import vitalstoffberatungBg from "@/assets/vitalstoffberatung-bg.jpg";
 import ohrreflextherapieBg from "@/assets/ohrreflextherapie-bg.jpg";
 import schmerztherapieBg from "@/assets/schmerztherapie-bg.jpg";
 import baunscheidtierenBg from "@/assets/baunscheidtieren-bg.jpg";
+import laboranalysenBg from "@/assets/laboranalysen-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -104,7 +105,7 @@ function HomePage() {
               { title: "Manuelle Schmerztherapie", desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.", bg: schmerztherapieBg },
               { title: "Baunscheidtieren", desc: "Alte Therapiemethode zur Mobilisierung der Selbstheilungskräfte über die Haut.", bg: baunscheidtierenBg },
               { title: "Blutegeltherapie", desc: "Einsatz bei Venenleiden, Arthrosen und Sehnenscheidenentzündungen.", bg: blutegeltherapieBg },
-              { title: "Laboranalysen", desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.", bg: undefined },
+              { title: "Laboranalysen", desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.", bg: laboranalysenBg },
             ].map((s) => (
               <Link
                 key={s.title}
