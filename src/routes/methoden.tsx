@@ -5,76 +5,123 @@ export const Route = createFileRoute("/methoden")({
   head: () => ({
     meta: [
       { title: "Methoden — Praxis RBT Dübendorf" },
-      { name: "description", content: "Therapiemethoden der TEN: Phytotherapie, Schröpfen, manuelle Therapien, Wickel und ausleitende Verfahren." },
-      { property: "og:title", content: "Methoden — Praxis RBT" },
-      { property: "og:description", content: "Unsere Behandlungsmethoden aus der traditionellen europäischen Naturheilkunde." },
+      { name: "description", content: "Massage, Schröpfen, Blutegeltherapie, Dorntherapie, Pflanzenheilkunde, Ernährungsberatung und weitere Naturheilkunde-Methoden." },
+      { property: "og:title", content: "Behandlungsmethoden — Praxis RBT" },
+      { property: "og:description", content: "Alle Therapiemethoden der Praxis RBT in Dübendorf." },
     ],
   }),
   component: MethodenPage,
 });
 
-function MethodenPage() {
-  const therapies = [
-    {
-      title: "Manuelle Therapien",
-      description: "Gezielte Handgriffe und Techniken lösen Blockaden im Bewegungsapparat, fördern die Durchblutung und unterstützen den Lymphfluss.",
-      icon: "🤲",
-    },
-    {
-      title: "Phytotherapie",
-      description: "Pflanzenheilkunde ist eine der ältesten Therapieformen. Individuell zusammengestellte Kräutermischungen, Tinkturen und Tees unterstützen die Heilung.",
-      icon: "🌿",
-    },
-    {
-      title: "Schröpfen",
-      description: "Durch Unterdruck auf der Haut wird die Durchblutung angeregt, Stoffwechselschlacken werden ausgeleitet und Verspannungen gelöst.",
-      icon: "⭕",
-    },
-    {
-      title: "Wickel & Auflagen",
-      description: "Warme oder kalte Anwendungen mit Heilpflanzen wirken gezielt auf bestimmte Körperregionen und fördern die Regeneration.",
-      icon: "🧴",
-    },
-    {
-      title: "Ausleitende Verfahren",
-      description: "Entgiftung und Entschlackung des Körpers durch bewährte naturheilkundliche Techniken – für einen freien Stoffwechsel.",
-      icon: "💧",
-    },
-    {
-      title: "Ernährungsberatung",
-      description: "Individuell abgestimmte Ernährungsempfehlungen nach den Prinzipien der TEN bilden das Fundament für nachhaltige Gesundheit.",
-      icon: "🥗",
-    },
-  ];
+const therapies = [
+  {
+    title: "Massage",
+    description: "Die klassische Massage ist die traditionellste und am meisten angewandte Massageform. Sie geht hauptsächlich auf die Belastungen des Alltags ein. Sie wirkt wunderbar bei Muskelverspannungen und deren Auswirkungen auf den gesamten Bewegungsapparat. Durch die in der Regel als entspannend empfundene Massage, ist auch ein positiver Einfluss auf die Psyche zu beobachten.",
+    icon: "🤲",
+  },
+  {
+    title: "Ernährungsberatung",
+    description: "Um funktionieren zu können, braucht unser Körper Nährstoffe – Makronährstoffe wie Fette, Eiweisse und Kohlenhydrate sowie Mikronährstoffe wie Vitamine, Mineralstoffe, Spurenelemente und sekundäre Pflanzenstoffe. In meiner Ernährungsberatung schauen wir uns deine Essgewohnheiten an und besprechen anhand deiner Ziele, was und wie du diese optimieren kannst.",
+    icon: "🥗",
+  },
+  {
+    title: "Pflanzenheilkunde",
+    description: "«Gegen jede Krankheit ist ein Kraut gewachsen» \u2013 Seit Jahrhunderten ist die Pflanzenheilkunde Teil der Therapien auf der ganzen Welt. Tinkturen, Tees und pulverisierte Pflanzenteile sind oft Teil meines individuell auf dich abgestimmten Therapiekonzepts.",
+    icon: "🌿",
+  },
+  {
+    title: "Entgiftungsbegleitung",
+    description: "Eine Entgiftungskur hilft dem Körper Giftstoffe wie Pestizide, Geschmacksverstärker, Farb- und Konservierungsstoffe, Umweltgifte, Schwermetalle, Medikamente und Genussmittel aus dem Körper auszuscheiden. Gerne begleite ich dich durch diesen Prozess mit meinem Entgiftungsprogramm.",
+    icon: "✨",
+  },
+  {
+    title: "Darmsanierung",
+    description: "Für mich eine der effektivsten Methoden um gute Voraussetzungen zu schaffen für jegliche Therapien und Ernährungsumstellungen. Die Darmsanierung läuft in mehreren Phasen ab: Entgiftung, Bekämpfung von Pilzen und Parasiten, Unverträglichkeiten ausfindig machen und das Darmmikrobiom stärken.",
+    icon: "🔄",
+  },
+  {
+    title: "Hormonberatung",
+    description: "Sind ein Ungleichgewicht der Hormone verantwortlich für deine Beschwerden? Anhand eines Fragebogens und bei Bedarf einem Speicheltest, welcher bequem zu Hause durchgeführt werden kann, wird ermittelt wie es um deinen Hormonhaushalt steht.",
+    icon: "⚖️",
+  },
+  {
+    title: "Vitalstoffberatung",
+    description: "Ich empfehle Vitalstoffe wenn durch die Ernährung nicht alles abgedeckt wird, in speziellen Lebensphasen oder je nach Alter und Jahreszeit zur Unterstützung. Eine Ausnahme mache ich beim Vitamin D3 (Dauereinnahme) und Vitamin B12 bei vegetarischer/veganer Ernährung.",
+    icon: "💊",
+  },
+  {
+    title: "Ohrreflexzonentherapie",
+    description: "Diverse Reflexpunkte am Ohr sind im Falle einer Störung im korrespondierenden Körpergebiet aktiv und nachweisbar. Mit einem Metallstäbchen werden diese Punkte gesucht und therapiert. Wunderbar unterstützend in Kombination mit anderen Therapien.",
+    icon: "👂",
+  },
+  {
+    title: "Fussreflexzonenmassage",
+    description: "Über die Reflexzonen am Fuss werden die Organe angeregt oder beruhigt. Die Selbstheilungskräfte werden aktiviert, der Lymphfluss und die Durchblutung angeregt. Bei Schlafstörungen, Kopfschmerzen, Verdauungsproblemen, Menstruationsbeschwerden und mehr.",
+    icon: "🦶",
+  },
+  {
+    title: "Schröpfen",
+    description: "Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen. Ausserdem kann direkt bei Schmerzen, Entzündungen und Durchblutungsstörungen Linderung verschafft werden. Die Schröpfkopfmassage lockert das Gewebe und regt den Stoffwechsel an.",
+    icon: "⭕",
+  },
+  {
+    title: "Baunscheidtieren",
+    description: "Bei dieser alten Therapiemethode wird die Haut angeraut und ein reizendes Öl aufgetragen. Es entsteht ein Ausschlag, welcher die volle Energie in den Körperbereich bringt und die Selbstheilungskräfte mobilisiert. Sehr wirksam bei Arthrosen, Arthritiden und Lymphstauungen.",
+    icon: "🌡️",
+  },
+  {
+    title: "Blutegeltherapie",
+    description: "Die Blutegeltherapie kann bei Erkrankungen des Venensystems, Hypertonie oder Gichtanfällen eingesetzt werden. Durch Studien belegte Indikationen sind Arthrosen der Knie und Daumensattelgelenke sowie Sehnenscheidenentzündungen.",
+    icon: "💧",
+  },
+  {
+    title: "Dorntherapie",
+    description: "Mit dieser sanften Methode werden Nervenbahnen entlastet und die Meridiane positiv beeinflusst. Diese Therapieform gilt als Gesundheitsvorsorge und als Anleitung zur Selbsthilfe – die Selbsthilfeübungen sind das Kernstück dieser Methode.",
+    icon: "🦴",
+  },
+  {
+    title: "Haarmineralanalyse",
+    description: "Anhand einer alternativen Austestung wird die Tendenz zu Unverträglichkeiten auf Nahrungsmittel und mögliche Mängel von Mineralstoffen und Vitaminen angezeigt. Vergleichbar mit der Bioresonanz.",
+    icon: "🔬",
+  },
+];
 
+function MethodenPage() {
   return (
     <div>
       {/* Hero */}
       <section className="section-padding bg-secondary/50">
         <div className="mx-auto max-w-6xl grid gap-12 md:grid-cols-2 items-center">
           <div className="order-2 md:order-1 rounded-xl overflow-hidden shadow-md">
-            <img src={methodenImg} alt="Therapiemethoden" className="w-full h-auto object-cover" width={800} height={600} />
+            <img src={methodenImg} alt="Therapiemethoden" className="w-full h-auto object-cover" loading="lazy" width={800} height={600} />
           </div>
           <div className="order-1 md:order-2">
             <h1 className="font-heading text-4xl font-semibold text-foreground md:text-5xl">Methoden</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Die TEN bietet ein breites Spektrum an sanften und wirkungsvollen Therapiemethoden. 
-              Jede Behandlung wird individuell auf Sie abgestimmt.
+              Bei einer kurzen Anamnese erzählst du mir, was deine aktuellen Beschwerden sind. 
+              Wir entscheiden dann gemeinsam, welche Therapiemethode die passende ist.
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Stundenansatz: <strong className="text-foreground">Fr. 147.00</strong>
             </p>
             <div className="mt-4 h-0.5 w-16 bg-primary" />
           </div>
         </div>
       </section>
 
-      {/* Therapies Grid */}
+      {/* Therapies */}
       <section className="section-padding">
         <div className="mx-auto max-w-5xl">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {therapies.map((therapy) => (
-              <div key={therapy.title} className="rounded-xl bg-card p-6 shadow-sm border border-border transition-all hover:shadow-md">
-                <span className="text-3xl">{therapy.icon}</span>
-                <h3 className="mt-3 font-heading text-lg font-semibold text-foreground">{therapy.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{therapy.description}</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {therapies.map((t) => (
+              <div key={t.title} className="rounded-xl bg-card p-6 shadow-sm border border-border">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl flex-shrink-0">{t.icon}</span>
+                  <div>
+                    <h3 className="font-heading text-lg font-semibold text-foreground">{t.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{t.description}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
