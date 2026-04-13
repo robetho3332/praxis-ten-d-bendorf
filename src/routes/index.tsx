@@ -5,6 +5,7 @@ import massageBg from "@/assets/massage-bg.jpg";
 import schroepfenBg from "@/assets/schroepfen-bg.jpg";
 import pflanzenheilkundeBg from "@/assets/pflanzenheilkunde-bg.jpg";
 import fussreflexzonenBg from "@/assets/fussreflexzonen-bg.jpg";
+import dorntherapieBg from "@/assets/dorntherapie-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -86,7 +87,7 @@ function HomePage() {
               { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.", bg: pflanzenheilkundeBg },
               { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: schroepfenBg },
               { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.", bg: fussreflexzonenBg },
-              { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: undefined },
+              { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: dorntherapieBg },
               { title: "Entgiftung", desc: "Begleitung durch ein Entgiftungsprogramm zur Ausscheidung von Giftstoffen.", bg: undefined },
               { title: "Darmsanierung", desc: "Aufbau eines gesunden Darmmikrobioms in mehreren Phasen.", bg: undefined },
               { title: "Hormonberatung", desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.", bg: undefined },
