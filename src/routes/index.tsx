@@ -77,21 +77,27 @@ function HomePage() {
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags." },
-              { title: "Ernährungsberatung", desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten." },
-              { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt." },
-              { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen." },
-              { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss." },
-              { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen." },
+              { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.", bg: undefined },
+              { title: "Ernährungsberatung", desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.", bg: ernaehrungBg },
+              { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.", bg: undefined },
+              { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: undefined },
+              { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.", bg: undefined },
+              { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: undefined },
             ].map((s) => (
               <Link
                 key={s.title}
                 to="/methoden"
-                className="group flex flex-col items-center justify-center text-center bg-card shadow-sm border border-border transition-all hover:shadow-md rounded-full aspect-square p-6"
+                className="group relative flex flex-col items-center justify-center text-center overflow-hidden bg-card shadow-sm border border-border transition-all hover:shadow-md rounded-full aspect-square p-6"
               >
-                <h3 className="font-heading text-lg font-semibold text-foreground">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                <span className="mt-3 inline-flex text-sm font-medium text-primary group-hover:underline">
+                {s.bg && (
+                  <>
+                    <img src={s.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                    <div className="absolute inset-0 bg-background/70" />
+                  </>
+                )}
+                <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
+                <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <span className="relative mt-3 inline-flex text-sm font-medium text-primary group-hover:underline">
                   Mehr erfahren →
                 </span>
               </Link>
