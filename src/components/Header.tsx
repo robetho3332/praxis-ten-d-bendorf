@@ -4,10 +4,12 @@ import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Start" },
+  { to: "/ueber-mich", label: "Über mich" },
   { to: "/ablauf", label: "Ablauf" },
   { to: "/diagnostik", label: "Diagnostik" },
   { to: "/methoden", label: "Methoden" },
   { to: "/shop", label: "Shop" },
+  { to: "/rabattcodes", label: "Rabattcodes" },
   { to: "/kontakt", label: "Kontakt" },
 ] as const;
 

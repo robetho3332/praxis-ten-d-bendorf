@@ -9,16 +9,28 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UeberMichRouteImport } from './routes/ueber-mich'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as RabattcodesRouteImport } from './routes/rabattcodes'
 import { Route as MethodenRouteImport } from './routes/methoden'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as DiagnostikRouteImport } from './routes/diagnostik'
 import { Route as AblaufRouteImport } from './routes/ablauf'
 import { Route as IndexRouteImport } from './routes/index'
 
+const UeberMichRoute = UeberMichRouteImport.update({
+  id: '/ueber-mich',
+  path: '/ueber-mich',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RabattcodesRoute = RabattcodesRouteImport.update({
+  id: '/rabattcodes',
+  path: '/rabattcodes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MethodenRoute = MethodenRouteImport.update({
@@ -53,7 +65,9 @@ export interface FileRoutesByFullPath {
   '/diagnostik': typeof DiagnostikRoute
   '/kontakt': typeof KontaktRoute
   '/methoden': typeof MethodenRoute
+  '/rabattcodes': typeof RabattcodesRoute
   '/shop': typeof ShopRoute
+  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +75,9 @@ export interface FileRoutesByTo {
   '/diagnostik': typeof DiagnostikRoute
   '/kontakt': typeof KontaktRoute
   '/methoden': typeof MethodenRoute
+  '/rabattcodes': typeof RabattcodesRoute
   '/shop': typeof ShopRoute
+  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,7 +86,9 @@ export interface FileRoutesById {
   '/diagnostik': typeof DiagnostikRoute
   '/kontakt': typeof KontaktRoute
   '/methoden': typeof MethodenRoute
+  '/rabattcodes': typeof RabattcodesRoute
   '/shop': typeof ShopRoute
+  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -80,9 +98,19 @@ export interface FileRouteTypes {
     | '/diagnostik'
     | '/kontakt'
     | '/methoden'
+    | '/rabattcodes'
     | '/shop'
+    | '/ueber-mich'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ablauf' | '/diagnostik' | '/kontakt' | '/methoden' | '/shop'
+  to:
+    | '/'
+    | '/ablauf'
+    | '/diagnostik'
+    | '/kontakt'
+    | '/methoden'
+    | '/rabattcodes'
+    | '/shop'
+    | '/ueber-mich'
   id:
     | '__root__'
     | '/'
@@ -90,7 +118,9 @@ export interface FileRouteTypes {
     | '/diagnostik'
     | '/kontakt'
     | '/methoden'
+    | '/rabattcodes'
     | '/shop'
+    | '/ueber-mich'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -99,16 +129,32 @@ export interface RootRouteChildren {
   DiagnostikRoute: typeof DiagnostikRoute
   KontaktRoute: typeof KontaktRoute
   MethodenRoute: typeof MethodenRoute
+  RabattcodesRoute: typeof RabattcodesRoute
   ShopRoute: typeof ShopRoute
+  UeberMichRoute: typeof UeberMichRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ueber-mich': {
+      id: '/ueber-mich'
+      path: '/ueber-mich'
+      fullPath: '/ueber-mich'
+      preLoaderRoute: typeof UeberMichRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shop': {
       id: '/shop'
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rabattcodes': {
+      id: '/rabattcodes'
+      path: '/rabattcodes'
+      fullPath: '/rabattcodes'
+      preLoaderRoute: typeof RabattcodesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/methoden': {
@@ -155,7 +201,9 @@ const rootRouteChildren: RootRouteChildren = {
   DiagnostikRoute: DiagnostikRoute,
   KontaktRoute: KontaktRoute,
   MethodenRoute: MethodenRoute,
+  RabattcodesRoute: RabattcodesRoute,
   ShopRoute: ShopRoute,
+  UeberMichRoute: UeberMichRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
