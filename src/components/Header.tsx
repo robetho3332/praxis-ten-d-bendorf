@@ -6,7 +6,7 @@ const navItems = [
   { to: "/ueber-mich", label: "Über mich" },
   { to: "/ablauf", label: "Ablauf" },
   { to: "/diagnostik", label: "Diagnostik" },
-  { to: "/methoden", label: "Methoden" },
+  { to: "/methoden", label: "Angebot" },
   { to: "/shop", label: "Shop" },
   { to: "/rabattcodes", label: "Rabattcodes" },
   { to: "/kontakt", label: "Kontakt" },
