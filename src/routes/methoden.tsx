@@ -127,26 +127,6 @@ function MethodenPage() {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="section-padding bg-secondary/50">
-        <div className="mx-auto max-w-6xl grid gap-12 md:grid-cols-2 items-center">
-          <div className="order-2 md:order-1 rounded-xl overflow-hidden shadow-md">
-            <img src={methodenImg} alt="Therapiemethoden" className="w-full h-auto object-cover" loading="lazy" width={800} height={600} />
-          </div>
-          <div className="order-1 md:order-2">
-            <h1 className="font-heading text-4xl font-semibold text-foreground md:text-5xl">Angebot</h1>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Bei einer kurzen Anamnese erzählst du mir, was deine aktuellen Beschwerden sind. 
-              Wir entscheiden dann gemeinsam, welche Therapiemethode die passende ist.
-            </p>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Stundenansatz: <strong className="text-foreground">Fr. 147.00</strong>
-            </p>
-            <div className="mt-4 h-0.5 w-16 bg-primary" />
-          </div>
-        </div>
-      </section>
-
       {/* Service Circles */}
       <section className="section-padding">
         <div className="mx-auto max-w-6xl">
