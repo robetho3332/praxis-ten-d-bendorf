@@ -2,19 +2,26 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
 
-const navItems = [
-  { to: "/", label: "Start" },
-  { to: "/methoden", label: "Angebot" },
-  
-  { to: "/abrechnung", label: "Abrechnung" },
-  { to: "/rabattcodes", label: "Rabattcodes" },
-  { to: "/ueber-mich", label: "Über\u00A0mich" },
-  { to: "/kontakt", label: "Kontakt" },
-  { to: "/shop", label: "Shop" },
-] as const;
+const anchorItems = [
+  { href: "#angebot", label: "Angebot" },
+  { href: "#abrechnung", label: "Abrechnung" },
+  { href: "#rabattcodes", label: "Rabattcodes" },
+  { href: "#ueber-mich", label: "Über\u00A0mich" },
+  { href: "#kontakt", label: "Kontakt" },
+];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -26,16 +33,23 @@ export function Header() {
         </div>
         <div className="flex items-center justify-between">
           <nav className="hidden md:flex items-center gap-8 mx-auto">
-            {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
+            {anchorItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => scrollTo(e, item.href)}
                 className="text-sm font-medium tracking-wide text-foreground/70 transition-colors hover:text-primary"
-                activeProps={{ className: "!text-primary" }}
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
+            <Link
+              to="/shop"
+              className="text-sm font-medium tracking-wide text-foreground/70 transition-colors hover:text-primary"
+              activeProps={{ className: "!text-primary" }}
+            >
+              Shop
+            </Link>
           </nav>
 
           <button
@@ -56,17 +70,24 @@ export function Header() {
 
       {mobileOpen && (
         <nav className="md:hidden bg-background border-t border-border px-6 py-4 space-y-3">
-          {navItems.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
+          {anchorItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => scrollTo(e, item.href)}
               className="block text-sm font-medium text-foreground/70 hover:text-primary py-1"
-              activeProps={{ className: "!text-primary" }}
-              onClick={() => setMobileOpen(false)}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
+          <Link
+            to="/shop"
+            className="block text-sm font-medium text-foreground/70 hover:text-primary py-1"
+            activeProps={{ className: "!text-primary" }}
+            onClick={() => setMobileOpen(false)}
+          >
+            Shop
+          </Link>
         </nav>
       )}
     </header>
