@@ -225,39 +225,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Ablauf */}
-      <section id="ablauf" className="scroll-mt-48">
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img src={ablaufImg} alt="" className="h-full w-full object-cover" width={1920} height={800} />
-            <div className="absolute inset-0 bg-background/70" />
-          </div>
-          <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
-            <h2 className="font-heading text-4xl font-semibold text-foreground md:text-5xl">Ablauf</h2>
-            <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-              Schritt für Schritt zu deinem Wohlbefinden – so gestaltet sich der Weg in meiner Praxis.
-            </p>
-            <div className="mt-4 h-0.5 w-16 bg-primary" />
-          </div>
-        </div>
-        <div className="section-padding">
-          <div className="mx-auto max-w-3xl space-y-12">
-            {ablaufSteps.map((step) => (
-              <div key={step.number} className="flex gap-6">
-                <div className="flex-shrink-0">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-lg font-heading font-semibold text-accent-foreground">
-                    {step.number}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-heading text-xl font-semibold text-foreground">{step.title}</h3>
-                  <p className="mt-2 text-muted-foreground leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Abrechnung */}
       <section id="abrechnung" className="section-padding bg-secondary/50 scroll-mt-48">
