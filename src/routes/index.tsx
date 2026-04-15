@@ -49,19 +49,33 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Intro TEN */}
+      {/* Manuelle Therapien */}
       <section className="section-padding">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-heading text-3xl font-semibold text-foreground md:text-4xl">
-            Traditionelle Europäische Naturheilkunde
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-heading text-4xl font-semibold text-foreground md:text-5xl mb-6">
+            Manuelle Therapien
           </h2>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
-            Bei einem ausführlichen Erstgespräch schauen wir uns gemeinsam deine Krankheitsgeschichte an. 
-            Dabei geht es nicht nur um die aktuellen Beschwerden, sondern um eine ganzheitliche Erfassung 
-            von dir als Person. Anhand einer Zungen-, Puls- und Irisdiagnose ermittle ich deine Konstitution, 
-            welche in den Therapieplan miteinbezogen wird.
+          <p className="text-muted-foreground leading-relaxed">
+            Schmerzen im Bewegungsapparat sind schon fast zu einer Volkskrankheit geworden. Bei einer kurzen Anamnese, erzählst du mir was deine aktuellen Beschwerden sind, wir entscheiden dann gemeinsam welche Therapiemethode die passende ist. Oder möchtest du einfach bei einer Massage oder Reflexzonentherapie entspannen? So oder so, melde dich gerne für einen Termin.
           </p>
-          <div className="mt-4 mx-auto h-0.5 w-16 bg-primary" />
+        </div>
+      </section>
+
+      {/* Naturheilkunde TEN */}
+      <section className="section-padding">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-heading text-4xl font-semibold text-foreground md:text-5xl mb-6">
+            Naturheilkunde
+          </h2>
+          <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
+            Traditionelle Europäische Naturheilkunde
+          </h3>
+          <p className="text-muted-foreground leading-relaxed">
+            Bei einem ausführlichen Erstgespräch, schauen wir uns gemeinsam deine Krankheitsgeschichte an, dabei geht es nicht nur um die aktuellen Beschwerden sondern um eine ganzheitliche Erfassung von dir als Person. Wir besprechen deine Therapieziele und was in der aktuellen Situation umsetzbar ist. Anhand einer Zungen, Puls und Irisdiagnose ermittle ich deine Konstitution, welche in den Therapieplan miteinbezogen wird. Bei Bedarf kann eine externe Labordiagnostik durchgeführt werden. Nach dem ich deinen persönlichen Therapieplan erstellt habe, besprechen wir diesen und vereinbaren dementsprechende Termine.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-4">
+            Bist du interessiert, dann melde dich für ein Erstgespräch.
+          </p>
         </div>
       </section>
 
