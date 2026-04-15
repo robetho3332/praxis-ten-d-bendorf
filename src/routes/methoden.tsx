@@ -123,7 +123,7 @@ const services = [
 ];
 
 function MethodenPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
