@@ -124,6 +124,48 @@ function MethodenPage() {
         </div>
       </section>
 
+      {/* Service Circles */}
+      <section className="section-padding bg-secondary/50">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-12">
+            Alle Behandlungen
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.", bg: massageBg },
+              { title: "Ernährungsberatung", desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.", bg: ernaehrungBg },
+              { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.", bg: pflanzenheilkundeBg },
+              { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: schroepfenBg },
+              { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.", bg: fussreflexzonenBg },
+              { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: dorntherapieBg },
+              { title: "Entgiftung", desc: "Begleitung durch ein Entgiftungsprogramm zur Ausscheidung von Giftstoffen.", bg: entgiftungBg },
+              { title: "Darmsanierung", desc: "Aufbau eines gesunden Darmmikrobioms in mehreren Phasen.", bg: darmsanierungBg },
+              { title: "Hormonberatung", desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.", bg: hormonberatungBg },
+              { title: "Vitalstoffberatung", desc: "Gezielte Empfehlung von Vitaminen und Mineralstoffen zur Unterstützung.", bg: vitalstoffberatungBg },
+              { title: "Ohrreflextherapie", desc: "Therapie über Reflexpunkte am Ohr zur Unterstützung der Heilung.", bg: ohrreflextherapieBg },
+              { title: "Manuelle Schmerztherapie", desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.", bg: schmerztherapieBg },
+              { title: "Baunscheidtieren", desc: "Alte Therapiemethode zur Mobilisierung der Selbstheilungskräfte über die Haut.", bg: baunscheidtierenBg },
+              { title: "Blutegeltherapie", desc: "Einsatz bei Venenleiden, Arthrosen und Sehnenscheidenentzündungen.", bg: blutegeltherapieBg },
+              { title: "Laboranalysen", desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.", bg: laboranalysenBg },
+            ].map((s) => (
+              <div
+                key={s.title}
+                className="group relative flex flex-col items-center justify-center text-center overflow-hidden bg-card shadow-sm border border-border transition-all hover:shadow-md rounded-full aspect-square p-6"
+              >
+                {s.bg && (
+                  <>
+                    <img src={s.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                    <div className="absolute inset-0 bg-background/70" />
+                  </>
+                )}
+                <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
+                <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Therapies */}
       <section className="section-padding">
         <div className="mx-auto max-w-5xl">
