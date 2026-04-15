@@ -117,7 +117,7 @@ const services = [
   {
     title: "Laboranalysen",
     desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.",
-    detail: "Anhand einer alternativen Austestung wird die Tendenz zu Unverträglichkeiten auf Nahrungsmittel und mögliche Mängel von Mineralstoffen und Vitaminen angezeigt. Vergleichbar mit der Bioresonanz.",
+    detail: "Viele Erkrankungen lassen sich mithilfe der Labordiagnostik sehr sicher erkennen. Daher ergänze ich deine Anamnese bei Bedarf durch eine gründliche Laboruntersuchung. Denn je genauer wir deine Beschwerden diagnostizieren, desto besser können wir sie behandeln. Dazu arbeite ich eng mit dem Labor Ortho-Analytic AG zusammen – so kann ich dir ein breites Spektrum an Laboruntersuchungen anbieten",
     bg: laboranalysenBg,
   },
 ];
