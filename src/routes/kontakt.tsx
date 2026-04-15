@@ -17,8 +17,8 @@ function KontaktPage() {
     <div>
       <section className="section-padding">
         <div className="mx-auto max-w-4xl">
-          <h1 className="font-heading text-4xl font-semibold text-foreground md:text-5xl">Kontakt</h1>
-          <div className="mt-4 h-0.5 w-16 bg-primary" />
+          <h1 className="font-heading text-4xl font-semibold text-foreground md:text-5xl text-center">Kontakt</h1>
+          <div className="mt-4 h-0.5 w-16 bg-primary mx-auto" />
 
           <div className="mt-12 space-y-6">
             {/* Contact Info */}
@@ -33,7 +33,7 @@ function KontaktPage() {
               </p>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-2 text-center">
               <p className="text-muted-foreground leading-relaxed">
                 Ab Bahnhof Dübendorf mit dem Bus Nr. 752 Richtung Kunsteisbahn<br />
                 Haltestelle Sonnenberg (3 Min. Fahrt)
@@ -58,7 +58,7 @@ function KontaktPage() {
           </div>
 
           {/* Contact Form */}
-          <form className="mt-12 max-w-lg space-y-4" onSubmit={(e) => {
+          <form className="mt-12 max-w-lg mx-auto space-y-4" onSubmit={(e) => {
             e.preventDefault();
             const form = e.currentTarget;
             const name = (form.elements.namedItem('name') as HTMLInputElement).value;
