@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png";
 const navItems = [
   { to: "/", label: "Start" },
   { to: "/methoden", label: "Angebot" },
-  { to: "/ablauf", label: "Ablauf" },
+  
   { to: "/abrechnung", label: "Abrechnung" },
   { to: "/rabattcodes", label: "Rabattcodes" },
   { to: "/ueber-mich", label: "Über\u00A0mich" },
