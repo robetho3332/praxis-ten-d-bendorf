@@ -18,9 +18,6 @@ function KontaktPage() {
       <section className="section-padding">
         <div className="mx-auto max-w-4xl">
           <h1 className="font-heading text-4xl font-semibold text-foreground md:text-5xl">Kontakt</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Ich freue mich auf Ihre Nachricht. Vereinbaren Sie ein kostenloses Erstgespräch.
-          </p>
           <div className="mt-4 h-0.5 w-16 bg-primary" />
 
           <div className="mt-12 grid gap-12 md:grid-cols-2">
