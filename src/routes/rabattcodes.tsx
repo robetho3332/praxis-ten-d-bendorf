@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import farfallaLogo from "@/assets/logos/farfalla.png";
-import kingnatureLogo from "@/assets/logos/kingnature.jpg";
+import kingnatureLogo from "@/assets/logos/kingnature.png";
 import sundayLogo from "@/assets/logos/sunday.png";
 import zimmerliLogo from "@/assets/logos/zimmerli.jpg";
 import mrsfluryLogo from "@/assets/logos/mrsflury.png";
@@ -59,7 +59,7 @@ function RabattcodesPage() {
           {/* Kingnature */}
           <div className="mb-12">
             <div className="flex justify-center mb-4">
-              <img src={kingnatureLogo} alt="Kingnature" className="h-16 object-contain" />
+              <img src={kingnatureLogo} alt="Kingnature" className="h-16 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
             </div>
             <h2 className="font-heading text-xl font-semibold text-foreground mb-3 text-center">
               Vitalstoffe und mehr...
@@ -136,7 +136,7 @@ function RabattcodesPage() {
           {/* Omni-Biotic / Verfora */}
           <div className="mb-12">
             <div className="flex justify-center mb-4">
-              <img src={omnibioticLogo} alt="Omni-Biotic" className="h-24 object-contain" />
+              <img src={omnibioticLogo} alt="Omni-Biotic" className="h-24 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
             </div>
             <h2 className="font-heading text-xl font-semibold text-foreground mb-3 text-center">
               Darmbakterien und mehr...
