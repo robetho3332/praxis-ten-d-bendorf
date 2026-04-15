@@ -141,7 +141,7 @@ function MethodenPage() {
       <section className="section-padding">
         <div className="mx-auto max-w-6xl">
           <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-12">
-            Alle Behandlungen
+            Angebot
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
