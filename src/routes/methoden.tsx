@@ -111,7 +111,7 @@ const services = [
   {
     title: "Blutegeltherapie",
     desc: "Einsatz bei Venenleiden, Arthrosen und Sehnenscheidenentzündungen.",
-    detail: "Die Blutegeltherapie kann bei Erkrankungen des Venensystems, Hypertonie oder Gichtanfällen eingesetzt werden. Durch Studien belegte Indikationen sind Arthrosen der Knie und Daumensattelgelenke sowie Sehnenscheidenentzündungen.",
+    detail: "Die Blutegeltherapie kann bei sehr vielen Krankheitsbildern eingesetzt werden zum Beispiel bei Erkrankungen des Venensystems, Infektionskrankheiten, Hypertonie oder bei einem Gichtanfall. Durch Studien belegte Indikation sind Arthrosen der Knie und der Daumensattelgelenke sowie Sehnenscheidenentzündungen. Die Wirkung erfolgt durch das Sekret welches die Blutegel während dem saugen absondern und welches über das Blut verteilt wird, sowie durch den Blutverlust welcher einem Aderlass ähnelt.",
     bg: blutegeltherapieBg,
   },
   {
