@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
+            <p className="text-sm text-primary-foreground/80 leading-relaxed text-center">
               Praxis für manuelle Therapien & Naturheilkunde<br />
               Romina Bertoletti Thoma<br />
               Eidg. dipl. Naturheilpraktikerin TEN<br />
