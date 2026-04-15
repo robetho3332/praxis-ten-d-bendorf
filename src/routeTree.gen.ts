@@ -9,41 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as UeberMichRouteImport } from './routes/ueber-mich'
 import { Route as ShopRouteImport } from './routes/shop'
-import { Route as RabattcodesRouteImport } from './routes/rabattcodes'
-import { Route as MethodenRouteImport } from './routes/methoden'
-import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
-import { Route as DiagnostikRouteImport } from './routes/diagnostik'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
-import { Route as AbrechnungRouteImport } from './routes/abrechnung'
-import { Route as AblaufRouteImport } from './routes/ablauf'
 import { Route as IndexRouteImport } from './routes/index'
 
-const UeberMichRoute = UeberMichRouteImport.update({
-  id: '/ueber-mich',
-  path: '/ueber-mich',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RabattcodesRoute = RabattcodesRouteImport.update({
-  id: '/rabattcodes',
-  path: '/rabattcodes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MethodenRoute = MethodenRouteImport.update({
-  id: '/methoden',
-  path: '/methoden',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KontaktRoute = KontaktRouteImport.update({
-  id: '/kontakt',
-  path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ImpressumRoute = ImpressumRouteImport.update({
@@ -51,24 +24,9 @@ const ImpressumRoute = ImpressumRouteImport.update({
   path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DiagnostikRoute = DiagnostikRouteImport.update({
-  id: '/diagnostik',
-  path: '/diagnostik',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const DatenschutzRoute = DatenschutzRouteImport.update({
   id: '/datenschutz',
   path: '/datenschutz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AbrechnungRoute = AbrechnungRouteImport.update({
-  id: '/abrechnung',
-  path: '/abrechnung',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AblaufRoute = AblaufRouteImport.update({
-  id: '/ablauf',
-  path: '/ablauf',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -79,135 +37,45 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/ablauf': typeof AblaufRoute
-  '/abrechnung': typeof AbrechnungRoute
   '/datenschutz': typeof DatenschutzRoute
-  '/diagnostik': typeof DiagnostikRoute
   '/impressum': typeof ImpressumRoute
-  '/kontakt': typeof KontaktRoute
-  '/methoden': typeof MethodenRoute
-  '/rabattcodes': typeof RabattcodesRoute
   '/shop': typeof ShopRoute
-  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/ablauf': typeof AblaufRoute
-  '/abrechnung': typeof AbrechnungRoute
   '/datenschutz': typeof DatenschutzRoute
-  '/diagnostik': typeof DiagnostikRoute
   '/impressum': typeof ImpressumRoute
-  '/kontakt': typeof KontaktRoute
-  '/methoden': typeof MethodenRoute
-  '/rabattcodes': typeof RabattcodesRoute
   '/shop': typeof ShopRoute
-  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/ablauf': typeof AblaufRoute
-  '/abrechnung': typeof AbrechnungRoute
   '/datenschutz': typeof DatenschutzRoute
-  '/diagnostik': typeof DiagnostikRoute
   '/impressum': typeof ImpressumRoute
-  '/kontakt': typeof KontaktRoute
-  '/methoden': typeof MethodenRoute
-  '/rabattcodes': typeof RabattcodesRoute
   '/shop': typeof ShopRoute
-  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/ablauf'
-    | '/abrechnung'
-    | '/datenschutz'
-    | '/diagnostik'
-    | '/impressum'
-    | '/kontakt'
-    | '/methoden'
-    | '/rabattcodes'
-    | '/shop'
-    | '/ueber-mich'
+  fullPaths: '/' | '/datenschutz' | '/impressum' | '/shop'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/ablauf'
-    | '/abrechnung'
-    | '/datenschutz'
-    | '/diagnostik'
-    | '/impressum'
-    | '/kontakt'
-    | '/methoden'
-    | '/rabattcodes'
-    | '/shop'
-    | '/ueber-mich'
-  id:
-    | '__root__'
-    | '/'
-    | '/ablauf'
-    | '/abrechnung'
-    | '/datenschutz'
-    | '/diagnostik'
-    | '/impressum'
-    | '/kontakt'
-    | '/methoden'
-    | '/rabattcodes'
-    | '/shop'
-    | '/ueber-mich'
+  to: '/' | '/datenschutz' | '/impressum' | '/shop'
+  id: '__root__' | '/' | '/datenschutz' | '/impressum' | '/shop'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AblaufRoute: typeof AblaufRoute
-  AbrechnungRoute: typeof AbrechnungRoute
   DatenschutzRoute: typeof DatenschutzRoute
-  DiagnostikRoute: typeof DiagnostikRoute
   ImpressumRoute: typeof ImpressumRoute
-  KontaktRoute: typeof KontaktRoute
-  MethodenRoute: typeof MethodenRoute
-  RabattcodesRoute: typeof RabattcodesRoute
   ShopRoute: typeof ShopRoute
-  UeberMichRoute: typeof UeberMichRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/ueber-mich': {
-      id: '/ueber-mich'
-      path: '/ueber-mich'
-      fullPath: '/ueber-mich'
-      preLoaderRoute: typeof UeberMichRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/shop': {
       id: '/shop'
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/rabattcodes': {
-      id: '/rabattcodes'
-      path: '/rabattcodes'
-      fullPath: '/rabattcodes'
-      preLoaderRoute: typeof RabattcodesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/methoden': {
-      id: '/methoden'
-      path: '/methoden'
-      fullPath: '/methoden'
-      preLoaderRoute: typeof MethodenRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kontakt': {
-      id: '/kontakt'
-      path: '/kontakt'
-      fullPath: '/kontakt'
-      preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/impressum': {
@@ -217,32 +85,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/diagnostik': {
-      id: '/diagnostik'
-      path: '/diagnostik'
-      fullPath: '/diagnostik'
-      preLoaderRoute: typeof DiagnostikRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/datenschutz': {
       id: '/datenschutz'
       path: '/datenschutz'
       fullPath: '/datenschutz'
       preLoaderRoute: typeof DatenschutzRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/abrechnung': {
-      id: '/abrechnung'
-      path: '/abrechnung'
-      fullPath: '/abrechnung'
-      preLoaderRoute: typeof AbrechnungRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ablauf': {
-      id: '/ablauf'
-      path: '/ablauf'
-      fullPath: '/ablauf'
-      preLoaderRoute: typeof AblaufRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -257,16 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AblaufRoute: AblaufRoute,
-  AbrechnungRoute: AbrechnungRoute,
   DatenschutzRoute: DatenschutzRoute,
-  DiagnostikRoute: DiagnostikRoute,
   ImpressumRoute: ImpressumRoute,
-  KontaktRoute: KontaktRoute,
-  MethodenRoute: MethodenRoute,
-  RabattcodesRoute: RabattcodesRoute,
   ShopRoute: ShopRoute,
-  UeberMichRoute: UeberMichRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
