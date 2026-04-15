@@ -125,6 +125,8 @@ const services = [
 function MethodenPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <div>
       {/* Hero */}
@@ -155,12 +157,16 @@ function MethodenPage() {
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
-              <div key={s.title} className="flex flex-col items-center">
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className={`group relative flex flex-col items-center justify-center text-center overflow-hidden bg-card shadow-sm border-2 transition-all hover:shadow-md rounded-full aspect-square p-6 w-full cursor-pointer ${
-                    openIndex === i ? "border-primary shadow-md" : "border-border"
+              <div
+                key={s.title}
+                className="relative aspect-square w-full"
+                onMouseEnter={() => setHoveredIndex(i)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {/* Circle (default) */}
+                <div
+                  className={`absolute inset-0 flex flex-col items-center justify-center text-center overflow-hidden bg-card shadow-sm border border-border rounded-full p-6 transition-opacity duration-300 ${
+                    hoveredIndex === i ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                 >
                   {s.bg && (
@@ -171,12 +177,17 @@ function MethodenPage() {
                   )}
                   <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
                   <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                </button>
-                {openIndex === i && (
-                  <div className="mt-4 w-full rounded-xl bg-card border border-primary/30 p-5 shadow-sm animate-fade-in">
-                    <p className="text-sm text-muted-foreground leading-relaxed">{s.detail}</p>
-                  </div>
-                )}
+                </div>
+
+                {/* Detail text (on hover) */}
+                <div
+                  className={`absolute inset-0 flex flex-col items-center justify-center text-center rounded-xl bg-primary/10 border border-primary/30 p-6 transition-opacity duration-300 ${
+                    hoveredIndex === i ? "opacity-100" : "opacity-0 pointer-events-none"
+                  }`}
+                >
+                  <h3 className="font-heading text-lg font-semibold text-foreground mb-3">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed overflow-y-auto max-h-[70%]">{s.detail}</p>
+                </div>
               </div>
             ))}
           </div>
