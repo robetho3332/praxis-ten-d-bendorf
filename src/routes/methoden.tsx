@@ -51,7 +51,7 @@ const services = [
   {
     title: "Schröpfen",
     desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.",
-    detail: "Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen. Ausserdem kann direkt bei Schmerzen, Entzündungen und Durchblutungsstörungen Linderung verschafft werden. Die Schröpfkopfmassage lockert das Gewebe und regt den Stoffwechsel an.",
+    detail: "Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen und diese unterstützen. Ausserdem kann direkt an Ort bei Schmerzen, Entzündungen, minder-und über- Durchblutung, Linderung verschafft werden. Ich wende die Schröpfkopfmassage gerne an um das Gewebe zu lockern, die Durchblutung und den Stoffwechsel anzuregen und somit die Ernährung des Gewebes zu verbessern.",
     bg: schroepfenBg,
   },
   {
