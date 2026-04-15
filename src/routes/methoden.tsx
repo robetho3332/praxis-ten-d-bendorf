@@ -164,7 +164,6 @@ function MethodenPage() {
                     </>
                   )}
                   <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
-                  <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                 </div>
 
                 {/* Detail text (on hover) */}
