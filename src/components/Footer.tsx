@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -17,10 +15,10 @@ export function Footer() {
           <div>
             <h3 className="font-heading text-lg font-semibold mb-3">Navigation</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><Link to="/ablauf" className="hover:text-primary-foreground transition-colors">Ablauf</Link></li>
-              <li><Link to="/diagnostik" className="hover:text-primary-foreground transition-colors">Diagnostik</Link></li>
-              <li><Link to="/methoden" className="hover:text-primary-foreground transition-colors">Methoden</Link></li>
-              <li><Link to="/shop" className="hover:text-primary-foreground transition-colors">Shop</Link></li>
+              <li><a href="#ablauf" className="hover:text-primary-foreground transition-colors">Ablauf</a></li>
+              <li><a href="#diagnostik" className="hover:text-primary-foreground transition-colors">Diagnostik</a></li>
+              <li><a href="#angebot" className="hover:text-primary-foreground transition-colors">Methoden</a></li>
+              <li><a href="#shop" className="hover:text-primary-foreground transition-colors">Shop</a></li>
             </ul>
           </div>
 
@@ -28,9 +26,9 @@ export function Footer() {
             <h3 className="font-heading text-lg font-semibold mb-3">Kontakt</h3>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Dübendorf, Schweiz<br />
-              <Link to="/kontakt" className="underline hover:text-primary-foreground transition-colors">
+              <a href="#kontakt" className="underline hover:text-primary-foreground transition-colors">
                 Kontaktformular
-              </Link>
+              </a>
             </p>
           </div>
         </div>
