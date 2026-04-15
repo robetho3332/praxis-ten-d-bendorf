@@ -17,9 +17,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="mx-auto max-w-6xl px-18 py-4">
-      </div>
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-18 py-9 border-t border-border/50">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-18 py-9">
 
 
         <nav className="hidden md:flex items-center gap-8">
