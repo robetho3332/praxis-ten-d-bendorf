@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Start" },
@@ -17,7 +18,13 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-18 py-9">
+      <div className="mx-auto max-w-6xl px-18 py-4">
+        <div className="flex justify-center mb-4">
+          <Link to="/">
+            <img src={logo} alt="Praxis RBT — Romina Bertoletti Thoma" className="h-20 w-auto" />
+          </Link>
+        </div>
+        <div className="flex items-center justify-center">
 
 
         <nav className="hidden md:flex items-center gap-8">
