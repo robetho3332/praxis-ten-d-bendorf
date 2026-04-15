@@ -8,7 +8,7 @@ const navItems = [
   { to: "/ablauf", label: "Ablauf" },
   { to: "/abrechnung", label: "Abrechnung" },
   { to: "/rabattcodes", label: "Rabattcodes" },
-  { to: "/ueber-mich", label: "Über mich" },
+  { to: "/ueber-mich", label: "Über\u00A0mich" },
   { to: "/kontakt", label: "Kontakt" },
   { to: "/shop", label: "Shop" },
 ] as const;
