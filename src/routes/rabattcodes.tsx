@@ -4,7 +4,7 @@ import kingnatureLogo from "@/assets/logos/kingnature.jpg";
 import sundayLogo from "@/assets/logos/sunday.png";
 import zimmerliLogo from "@/assets/logos/zimmerli.jpg";
 import mrsfluryLogo from "@/assets/logos/mrsflury.png";
-import omnibioticLogo from "@/assets/logos/omnibiotic.jpg";
+import omnibioticLogo from "@/assets/logos/omnibiotic.png";
 
 export const Route = createFileRoute("/rabattcodes")({
   head: () => ({
