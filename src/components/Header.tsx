@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Start" },
@@ -17,35 +18,40 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-18 py-9">
+      <div className="mx-auto max-w-6xl px-18 py-4">
+        <div className="flex justify-center mb-4">
+          <Link to="/">
+            <img src={logo} alt="Praxis RBT — Romina Bertoletti Thoma" className="h-20 w-auto" />
+          </Link>
+        </div>
+        <div className="flex items-center justify-between">
+          <nav className="hidden md:flex items-center gap-8 mx-auto">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="text-sm font-medium tracking-wide text-foreground/70 transition-colors hover:text-primary"
+                activeProps={{ className: "!text-primary" }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-
-        <nav className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-sm font-medium tracking-wide text-foreground/70 transition-colors hover:text-primary"
-              activeProps={{ className: "!text-primary" }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-foreground"
-          aria-label="Menü öffnen"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 text-foreground ml-auto"
+            aria-label="Menü öffnen"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
