@@ -8,9 +8,12 @@ export function Footer() {
           <div>
             
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Praxis für manuelle Therapien<br />
-              & Naturheilkunde TEN<br />
-              Romina Bertoletti Thoma
+              Praxis für manuelle Therapien & Naturheilkunde<br />
+              Romina Bertoletti Thoma<br />
+              Eidg. dipl. Naturheilpraktikerin TEN<br />
+              Alte Gfennstrasse 86<br />
+              8600 Dübendorf<br />
+              <a href="tel:+41794531716" className="hover:text-primary-foreground transition-colors">079 453 17 16</a>
             </p>
           </div>
 
