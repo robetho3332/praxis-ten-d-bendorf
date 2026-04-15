@@ -19,8 +19,11 @@ export function Footer() {
           <div></div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-primary-foreground/20 text-center text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} Romina Bertoletti Thoma. Alle Rechte vorbehalten.
+        <div className="mt-10 pt-6 border-t border-primary-foreground/20 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-primary-foreground/60">
+          <span>© {new Date().getFullYear()} Romina Bertoletti Thoma. Alle Rechte vorbehalten.</span>
+          <Link to="/impressum" className="hover:text-primary-foreground transition-colors underline">
+            Impressum
+          </Link>
         </div>
       </div>
     </footer>

@@ -14,6 +14,7 @@ import { Route as ShopRouteImport } from './routes/shop'
 import { Route as RabattcodesRouteImport } from './routes/rabattcodes'
 import { Route as MethodenRouteImport } from './routes/methoden'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as DiagnostikRouteImport } from './routes/diagnostik'
 import { Route as AbrechnungRouteImport } from './routes/abrechnung'
 import { Route as AblaufRouteImport } from './routes/ablauf'
@@ -44,6 +45,11 @@ const KontaktRoute = KontaktRouteImport.update({
   path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DiagnostikRoute = DiagnostikRouteImport.update({
   id: '/diagnostik',
   path: '/diagnostik',
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/ablauf': typeof AblaufRoute
   '/abrechnung': typeof AbrechnungRoute
   '/diagnostik': typeof DiagnostikRoute
+  '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/methoden': typeof MethodenRoute
   '/rabattcodes': typeof RabattcodesRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByTo {
   '/ablauf': typeof AblaufRoute
   '/abrechnung': typeof AbrechnungRoute
   '/diagnostik': typeof DiagnostikRoute
+  '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/methoden': typeof MethodenRoute
   '/rabattcodes': typeof RabattcodesRoute
@@ -93,6 +101,7 @@ export interface FileRoutesById {
   '/ablauf': typeof AblaufRoute
   '/abrechnung': typeof AbrechnungRoute
   '/diagnostik': typeof DiagnostikRoute
+  '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/methoden': typeof MethodenRoute
   '/rabattcodes': typeof RabattcodesRoute
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
     | '/ablauf'
     | '/abrechnung'
     | '/diagnostik'
+    | '/impressum'
     | '/kontakt'
     | '/methoden'
     | '/rabattcodes'
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
     | '/ablauf'
     | '/abrechnung'
     | '/diagnostik'
+    | '/impressum'
     | '/kontakt'
     | '/methoden'
     | '/rabattcodes'
@@ -128,6 +139,7 @@ export interface FileRouteTypes {
     | '/ablauf'
     | '/abrechnung'
     | '/diagnostik'
+    | '/impressum'
     | '/kontakt'
     | '/methoden'
     | '/rabattcodes'
@@ -140,6 +152,7 @@ export interface RootRouteChildren {
   AblaufRoute: typeof AblaufRoute
   AbrechnungRoute: typeof AbrechnungRoute
   DiagnostikRoute: typeof DiagnostikRoute
+  ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
   MethodenRoute: typeof MethodenRoute
   RabattcodesRoute: typeof RabattcodesRoute
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/diagnostik': {
       id: '/diagnostik'
       path: '/diagnostik'
@@ -220,6 +240,7 @@ const rootRouteChildren: RootRouteChildren = {
   AblaufRoute: AblaufRoute,
   AbrechnungRoute: AbrechnungRoute,
   DiagnostikRoute: DiagnostikRoute,
+  ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
   MethodenRoute: MethodenRoute,
   RabattcodesRoute: RabattcodesRoute,
