@@ -44,15 +44,6 @@ function UeberMichPage() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <h1 className="font-heading text-3xl font-semibold text-foreground md:text-4xl">
-              Praxis für manuelle Therapien & Naturheilkunde TEN
-            </h1>
-            <h2 className="font-heading text-2xl font-semibold text-foreground mt-4 md:text-3xl">
-              Romina Bertoletti Thoma
-            </h2>
-            <div className="mt-4 mx-auto h-0.5 w-16 bg-primary" />
-          </div>
         </div>
       </section>
     </div>
