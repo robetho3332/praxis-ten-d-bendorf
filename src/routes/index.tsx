@@ -21,8 +21,9 @@ function HomePage() {
         <div className="absolute inset-0 -top-40">
           <img src={heroBg} alt="" className="h-full w-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-background/60" />
-          <span className="absolute bottom-6 right-6 text-foreground/60 text-sm italic z-10" style={{ fontFamily: "'Dancing Script', cursive" }}>
-            Sonnenberg am 28.11.2025
+          <span className="absolute bottom-6 right-6 text-foreground/60 italic z-10 text-right" style={{ fontFamily: "'Dancing Script', cursive" }}>
+            <span className="text-lg md:text-xl">Sonnenberg am</span><br />
+            <span className="text-sm">28.11.2025</span>
           </span>
         </div>
         <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-24 md:pt-20 md:pb-32">
