@@ -59,7 +59,17 @@ function KontaktPage() {
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+              const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+              const phone = (form.elements.namedItem('phone') as HTMLInputElement).value;
+              const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+              const subject = `Kontaktanfrage von ${name}`;
+              const body = `Name: ${name}\nE-Mail: ${email}\nTelefon: ${phone}\n\nNachricht:\n${message}`;
+              window.location.href = `mailto:r.bertolettithoma@icloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            }}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">Name</label>
                 <input
