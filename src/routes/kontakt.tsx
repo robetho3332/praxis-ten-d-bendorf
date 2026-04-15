@@ -23,7 +23,7 @@ function KontaktPage() {
           <div className="mt-12 space-y-6">
             {/* Contact Info */}
             <div>
-              <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-center">
                 Praxis für manuelle Therapien & Naturheilkunde<br />
                 Romina Bertoletti Thoma<br />
                 Eidg. dipl. Naturheilpraktikerin TEN<br />
