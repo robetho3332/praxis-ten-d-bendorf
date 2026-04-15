@@ -163,7 +163,7 @@ function MethodenPage() {
                       <div className="absolute inset-0 bg-background/70" />
                     </>
                   )}
-                  <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
+                  <h3 className="relative font-heading text-2xl font-semibold text-foreground">{s.title}</h3>
                 </div>
 
                 {/* Detail text (on hover) */}
