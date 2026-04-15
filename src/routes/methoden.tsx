@@ -93,7 +93,7 @@ const services = [
   {
     title: "Ohrreflextherapie",
     desc: "Therapie über Reflexpunkte am Ohr zur Unterstützung der Heilung.",
-    detail: "Diverse Reflexpunkte am Ohr sind im Falle einer Störung im korrespondierenden Körpergebiet aktiv und nachweisbar. Mit einem Metallstäbchen werden diese Punkte gesucht und therapiert. Wunderbar unterstützend in Kombination mit anderen Therapien.",
+    detail: "Diverse Reflexpunkte am Ohr sind im Falle einer Störung im korrespondierenden Körpergebiet aktiv und nachweisbar. Mit einem Metallstäbchen werden diese Punkte gesucht und therapiert. Ich wende diese Behandlung oft in Kombination mit anderen Therapien an, da sie wunderbar unterstützend wirkt.",
     bg: ohrreflextherapieBg,
   },
   {
