@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="font-heading text-lg font-semibold mb-3">Praxis RBT</h3>
+            
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Praxis für manuelle Therapien<br />
               & Naturheilkunde TEN<br />
