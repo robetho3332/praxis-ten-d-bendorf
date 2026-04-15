@@ -16,15 +16,7 @@ export function Footer() {
 
           <div></div>
 
-          <div>
-            <h3 className="font-heading text-lg font-semibold mb-3">Kontakt</h3>
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Dübendorf, Schweiz<br />
-              <Link to="/kontakt" className="underline hover:text-primary-foreground transition-colors">
-                Kontaktformular
-              </Link>
-            </p>
-          </div>
+          <div></div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-primary-foreground/20 text-center text-xs text-primary-foreground/60">
