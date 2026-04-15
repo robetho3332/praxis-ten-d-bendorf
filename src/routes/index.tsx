@@ -69,28 +69,6 @@ function HomePage() {
       </section>
 
 
-      {/* EMR Info */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-heading text-2xl font-semibold text-foreground md:text-3xl">
-            Zusatzversicherung
-          </h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            Ich bin beim EMR unter der ZSR Nr. M100663 registriert. Bitte erkundige dich im Voraus 
-            bei deinem Krankenversicherer, ob die Behandlung von der Zusatzversicherung übernommen wird. 
-            Jeder Krankenversicherer vergütet ausschliesslich Behandlungen gemäss seinem Leistungskatalog.
-          </p>
-          <a
-            href="https://emr.ch/therapeut/romina.bertoletti.thoma"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex text-sm font-medium text-primary hover:underline"
-          >
-            EMR-Profil ansehen →
-          </a>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="section-padding bg-accent/50">
         <div className="mx-auto max-w-2xl text-center">
