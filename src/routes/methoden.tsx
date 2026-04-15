@@ -1,5 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import methodenImg from "@/assets/methoden.jpg";
+import ernaehrungBg from "@/assets/ernaehrung-bg.jpg";
+import massageBg from "@/assets/massage-bg.jpg";
+import schroepfenBg from "@/assets/schroepfen-bg.jpg";
+import pflanzenheilkundeBg from "@/assets/pflanzenheilkunde-bg.jpg";
+import fussreflexzonenBg from "@/assets/fussreflexzonen-bg.jpg";
+import dorntherapieBg from "@/assets/dorntherapie-bg.jpg";
+import blutegeltherapieBg from "@/assets/blutegeltherapie-bg.jpg";
+import entgiftungBg from "@/assets/entgiftung-bg.jpg";
+import darmsanierungBg from "@/assets/darmsanierung-bg.jpg";
+import hormonberatungBg from "@/assets/hormonberatung-bg.jpg";
+import vitalstoffberatungBg from "@/assets/vitalstoffberatung-bg.jpg";
+import ohrreflextherapieBg from "@/assets/ohrreflextherapie-bg.jpg";
+import schmerztherapieBg from "@/assets/schmerztherapie-bg.jpg";
+import baunscheidtierenBg from "@/assets/baunscheidtieren-bg.jpg";
+import laboranalysenBg from "@/assets/laboranalysen-bg.jpg";
 
 export const Route = createFileRoute("/methoden")({
   head: () => ({
