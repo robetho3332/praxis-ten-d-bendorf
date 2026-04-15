@@ -24,9 +24,6 @@ function HomePage() {
         </div>
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-36 lg:py-44">
           <div className="max-w-2xl">
-            <h1 className="animate-fade-in-up-delay mt-4 font-heading text-4xl font-semibold leading-tight text-foreground md:text-5xl lg:text-6xl">
-              Manuelle Therapien & Naturheilkunde
-            </h1>
             <p className="animate-fade-in-up-delay-2 mt-6 text-lg text-muted-foreground leading-relaxed max-w-lg">
               Schmerzen im Bewegungsapparat? Oder möchtest du einfach bei einer Massage entspannen? 
               Melde dich gerne für einen Termin.
