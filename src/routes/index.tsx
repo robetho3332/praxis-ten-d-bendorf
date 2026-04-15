@@ -22,9 +22,9 @@ function HomePage() {
           <img src={heroBg} alt="" className="h-full w-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-background/60" />
         </div>
-        <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-36 lg:py-44">
-          <div className="max-w-2xl">
-            <div className="animate-fade-in-up-delay-2 mt-8 flex flex-wrap gap-4">
+        <div className="relative mx-auto max-w-6xl px-6 py-12 md:py-16">
+          <div className="flex justify-center">
+            <div className="animate-fade-in-up-delay-2 flex flex-wrap gap-4 justify-center">
               <Link
                 to="/kontakt"
                 className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
