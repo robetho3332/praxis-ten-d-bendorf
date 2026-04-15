@@ -16,6 +16,7 @@ import { Route as MethodenRouteImport } from './routes/methoden'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as DiagnostikRouteImport } from './routes/diagnostik'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as AbrechnungRouteImport } from './routes/abrechnung'
 import { Route as AblaufRouteImport } from './routes/ablauf'
 import { Route as IndexRouteImport } from './routes/index'
@@ -55,6 +56,11 @@ const DiagnostikRoute = DiagnostikRouteImport.update({
   path: '/diagnostik',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AbrechnungRoute = AbrechnungRouteImport.update({
   id: '/abrechnung',
   path: '/abrechnung',
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ablauf': typeof AblaufRoute
   '/abrechnung': typeof AbrechnungRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/diagnostik': typeof DiagnostikRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
@@ -87,6 +94,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ablauf': typeof AblaufRoute
   '/abrechnung': typeof AbrechnungRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/diagnostik': typeof DiagnostikRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
@@ -100,6 +108,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/ablauf': typeof AblaufRoute
   '/abrechnung': typeof AbrechnungRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/diagnostik': typeof DiagnostikRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
@@ -114,6 +123,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ablauf'
     | '/abrechnung'
+    | '/datenschutz'
     | '/diagnostik'
     | '/impressum'
     | '/kontakt'
@@ -126,6 +136,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ablauf'
     | '/abrechnung'
+    | '/datenschutz'
     | '/diagnostik'
     | '/impressum'
     | '/kontakt'
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ablauf'
     | '/abrechnung'
+    | '/datenschutz'
     | '/diagnostik'
     | '/impressum'
     | '/kontakt'
@@ -151,6 +163,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AblaufRoute: typeof AblaufRoute
   AbrechnungRoute: typeof AbrechnungRoute
+  DatenschutzRoute: typeof DatenschutzRoute
   DiagnostikRoute: typeof DiagnostikRoute
   ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
@@ -211,6 +224,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DiagnostikRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/abrechnung': {
       id: '/abrechnung'
       path: '/abrechnung'
@@ -239,6 +259,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AblaufRoute: AblaufRoute,
   AbrechnungRoute: AbrechnungRoute,
+  DatenschutzRoute: DatenschutzRoute,
   DiagnostikRoute: DiagnostikRoute,
   ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
