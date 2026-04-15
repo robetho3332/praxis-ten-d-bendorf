@@ -51,7 +51,17 @@ const services = [
   {
     title: "Schröpfen",
     desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.",
-    detail: "Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen und diese unterstützen. Ausserdem kann direkt an Ort bei Schmerzen, Entzündungen, minder-und über- Durchblutung, Linderung verschafft werden. Ich wende die Schröpfkopfmassage gerne an um das Gewebe zu lockern, die Durchblutung und den Stoffwechsel anzuregen und somit die Ernährung des Gewebes zu verbessern.",
+    detail: (
+      <>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen und diese unterstützen. Ausserdem kann direkt an Ort bei Schmerzen, Entzündungen, minder-und über- Durchblutung, Linderung verschafft werden.
+        </p>
+        <h4 className="font-heading text-lg font-semibold text-foreground mt-4 mb-2">Schröpfkopfmassage</h4>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Ich wende die Schröpfkopfmassage gerne an um das Gewebe zu lockern, die Durchblutung und den Stoffwechsel anzuregen und somit die Ernährung des Gewebes zu verbessern.
+        </p>
+      </>
+    ),
     bg: schroepfenBg,
   },
   {
@@ -164,7 +174,7 @@ function MethodenPage() {
                   }`}
                 >
                   <h3 className="font-heading text-lg font-semibold text-foreground mb-3">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed overflow-y-auto max-h-[70%]">{s.detail}</p>
+                  <div className="overflow-y-auto max-h-[70%] w-full">{s.detail}</div>
                 </div>
               </div>
             ))}
