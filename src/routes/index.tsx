@@ -32,10 +32,10 @@ function HomePage() {
                 Termin vereinbaren
               </Link>
               <Link
-                to="/ablauf"
+                to="/shop"
                 className="inline-flex items-center rounded-lg border border-border bg-card/80 px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-card"
               >
-                So läuft es ab
+                Shop
               </Link>
             </div>
           </div>
