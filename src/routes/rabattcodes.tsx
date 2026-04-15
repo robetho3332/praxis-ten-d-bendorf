@@ -4,7 +4,7 @@ import kingnatureLogo from "@/assets/logos/kingnature.jpg";
 import sundayLogo from "@/assets/logos/sunday.png";
 import zimmerliLogo from "@/assets/logos/zimmerli.jpg";
 import mrsfluryLogo from "@/assets/logos/mrsflury.png";
-import omnibioticLogo from "@/assets/logos/omnibiotic.jpg";
+import omnibioticLogo from "@/assets/logos/omnibiotic.png";
 
 export const Route = createFileRoute("/rabattcodes")({
   head: () => ({
@@ -42,7 +42,7 @@ function RabattcodesPage() {
           {/* Farfalla */}
           <div className="mb-12">
             <div className="flex justify-center mb-4">
-              <img src={farfallaLogo} alt="Farfalla" className="h-16 object-contain" />
+              <img src={farfallaLogo} alt="Farfalla" className="h-16 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
             </div>
             <h2 className="font-heading text-xl font-semibold text-foreground mb-3 text-center">
               Pflegeprodukte, Ätherische Öle und mehr...
@@ -96,7 +96,7 @@ function RabattcodesPage() {
           {/* Zimmerli Adaptogene */}
           <div className="mb-12">
             <div className="flex justify-center mb-4">
-              <img src={zimmerliLogo} alt="Zimmerli Adaptogene" className="h-16 object-contain" />
+              <img src={zimmerliLogo} alt="Zimmerli Adaptogene" className="h-16 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
             </div>
             <h2 className="font-heading text-xl font-semibold text-foreground mb-3 text-center">
               Adaptogene Teemischungen, Pulver und Kapseln
