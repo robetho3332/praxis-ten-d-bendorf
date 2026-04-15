@@ -105,7 +105,7 @@ const services = [
   {
     title: "Baunscheidtieren",
     desc: "Alte Therapiemethode zur Mobilisierung der Selbstheilungskräfte über die Haut.",
-    detail: "Bei dieser alten Therapiemethode wird die Haut angeraut und ein reizendes Öl aufgetragen. Es entsteht ein Ausschlag, welcher die volle Energie in den Körperbereich bringt und die Selbstheilungskräfte mobilisiert. Sehr wirksam bei Arthrosen, Arthritiden und Lymphstauungen.",
+    detail: "Bei dieser alten Therapiemethode wird mit einem Nadelkopf die Haut angeraut und ein reizendes Öl aufgetragen. Es entsteht ein Ausschlag welcher dazu führt die volle Energie in diesen Körperbereich zu bringen und so die Selbstheilungskräfte zu mobilisieren und die „Säfte" wieder zum fliessen zu bringen. Ich setze diese Methode sehr gerne bei diversen Beschwerden des Bewegungsapparates ein wie zum Beispiel Arthrosen, Arthritiden, Schmerzen der Muskulatur, Lymphstauungen oder präventiv um das Immunsystem zu stärken.",
     bg: baunscheidtierenBg,
   },
   {
