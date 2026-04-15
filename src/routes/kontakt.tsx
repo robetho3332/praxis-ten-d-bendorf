@@ -27,24 +27,13 @@ function KontaktPage() {
             {/* Contact Info */}
             <div className="space-y-6">
               <div>
-                <h2 className="font-heading text-xl font-semibold text-foreground">Praxis</h2>
-                <p className="mt-2 text-muted-foreground leading-relaxed">
-                  Praxis für manuelle Therapien<br />
-                  & Naturheilkunde TEN<br />
-                  Romina Bertoletti Thoma
-                </p>
-              </div>
-              <div>
-                <h2 className="font-heading text-xl font-semibold text-foreground">Adresse</h2>
-                <p className="mt-2 text-muted-foreground">
-                  Dübendorf, Schweiz
-                </p>
-              </div>
-              <div>
-                <h2 className="font-heading text-xl font-semibold text-foreground">Öffnungszeiten</h2>
-                <p className="mt-2 text-muted-foreground leading-relaxed">
-                  Montag – Freitag: nach Vereinbarung<br />
-                  Samstag: nach Vereinbarung
+                <p className="text-muted-foreground leading-relaxed">
+                  Praxis für manuelle Therapien & Naturheilkunde<br />
+                  Romina Bertoletti Thoma<br />
+                  Eidg. dipl. Naturheilpraktikerin TEN<br />
+                  Alte Gfennstrasse 86<br />
+                  8600 Dübendorf<br />
+                  <a href="tel:+41794531716" className="text-primary hover:underline">079 453 17 16</a>
                 </p>
               </div>
             </div>
