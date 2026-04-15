@@ -52,7 +52,7 @@ function HomePage() {
       {/* Manuelle Therapien */}
       <section className="section-padding">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-4xl font-semibold text-foreground md:text-5xl mb-6">
+          <h2 className="font-heading text-3xl font-semibold text-foreground md:text-4xl mb-6">
             Manuelle Therapien
           </h2>
           <p className="text-muted-foreground leading-relaxed">
