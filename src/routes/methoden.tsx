@@ -87,7 +87,7 @@ const services = [
   {
     title: "Vitalstoffberatung",
     desc: "Gezielte Empfehlung von Vitaminen und Mineralstoffen zur Unterstützung.",
-    detail: "Ich empfehle Vitalstoffe wenn durch die Ernährung nicht alles abgedeckt wird, in speziellen Lebensphasen oder je nach Alter und Jahreszeit zur Unterstützung. Eine Ausnahme mache ich beim Vitamin D3 (Dauereinnahme) und Vitamin B12 bei vegetarischer/veganer Ernährung.",
+    detail: "Prinzipiell sollte unser Körper in der Lage sein, Nährstoffe aus unserer Nahrung aufzunehmen und zu verwerten. Ich empfehle Vitalstoffe wenn durch die Ernährung nicht alles abgedeckt wird, in speziellen Lebensphasen oder je nach Alter und Jahreszeit zur Unterstützung. Eine Ausnahme mache ich beim Vitamin D3 welches ich als Dauereinnahme empfehle und Vitamin B12 welches bei vegetarischer und veganer Ernährung immer substituiert werden sollte. Über Produkte und Einnahmeempfehlung, berate ich dich gerne",
     bg: vitalstoffberatungBg,
   },
   {
