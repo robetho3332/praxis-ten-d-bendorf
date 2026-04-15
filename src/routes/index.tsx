@@ -49,22 +49,17 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Manuelle Therapien */}
+      {/* Therapieangebot */}
       <section className="section-padding">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl mb-6">
             Manuelle Therapien
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed mb-8">
             Schmerzen im Bewegungsapparat sind schon fast zu einer Volkskrankheit geworden. Bei einer kurzen Anamnese, erzählst du mir was deine aktuellen Beschwerden sind, wir entscheiden dann gemeinsam welche Therapiemethode die passende ist. Oder möchtest du einfach bei einer Massage oder Reflexzonentherapie entspannen? So oder so, melde dich gerne für einen Termin.
           </p>
-        </div>
-      </section>
 
-      {/* Naturheilkunde TEN */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl mb-6">
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl mb-6 mt-12">
             Traditionelle Europäische Naturheilkunde
           </h2>
           <p className="text-muted-foreground leading-relaxed">
