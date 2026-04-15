@@ -33,6 +33,29 @@ function KontaktPage() {
                   <a href="tel:+41794531716" className="text-primary hover:underline">079 453 17 16</a>
                 </p>
               </div>
+
+              <div className="space-y-2">
+                <p className="text-muted-foreground leading-relaxed">
+                  Ab Bahnhof Dübendorf mit dem Bus Nr. 752 Richtung Kunsteisbahn<br />
+                  Haltestelle Sonnenberg (3 Min. Fahrt)
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Oder mit dem Auto, Parkplatz direkt vor dem Haus
+                </p>
+              </div>
+
+              <div className="mt-4 overflow-hidden rounded-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.5!2d8.6236!3d47.3969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa7e2f3a3e8ed%3A0x0!2sAlte+Gfennstrasse+86%2C+8600+D%C3%BCbendorf!5e0!3m2!1sde!2sch!4v1"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Standort Praxis RBT auf Google Maps"
+                />
+              </div>
             </div>
 
             {/* Contact Form */}
