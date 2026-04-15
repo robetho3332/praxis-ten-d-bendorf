@@ -1,20 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
-import ernaehrungBg from "@/assets/ernaehrung-bg.jpg";
-import massageBg from "@/assets/massage-bg.jpg";
-import schroepfenBg from "@/assets/schroepfen-bg.jpg";
-import pflanzenheilkundeBg from "@/assets/pflanzenheilkunde-bg.jpg";
-import fussreflexzonenBg from "@/assets/fussreflexzonen-bg.jpg";
-import dorntherapieBg from "@/assets/dorntherapie-bg.jpg";
-import blutegeltherapieBg from "@/assets/blutegeltherapie-bg.jpg";
-import entgiftungBg from "@/assets/entgiftung-bg.jpg";
-import darmsanierungBg from "@/assets/darmsanierung-bg.jpg";
-import hormonberatungBg from "@/assets/hormonberatung-bg.jpg";
-import vitalstoffberatungBg from "@/assets/vitalstoffberatung-bg.jpg";
-import ohrreflextherapieBg from "@/assets/ohrreflextherapie-bg.jpg";
-import schmerztherapieBg from "@/assets/schmerztherapie-bg.jpg";
-import baunscheidtierenBg from "@/assets/baunscheidtieren-bg.jpg";
-import laboranalysenBg from "@/assets/laboranalysen-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -82,50 +67,19 @@ function HomePage() {
 
       {/* Services Overview */}
       <section className="section-padding bg-secondary/50">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-4">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-heading text-3xl font-semibold text-foreground md:text-4xl mb-4">
             Mein Angebot
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mb-8">
             Stundenansatz für manuelle Therapien & Naturheilkunde: <strong className="text-foreground">Fr. 147.00</strong>
           </p>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.", bg: massageBg },
-              { title: "Ernährungsberatung", desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.", bg: ernaehrungBg },
-              { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.", bg: pflanzenheilkundeBg },
-              { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: schroepfenBg },
-              { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.", bg: fussreflexzonenBg },
-              { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: dorntherapieBg },
-              { title: "Entgiftung", desc: "Begleitung durch ein Entgiftungsprogramm zur Ausscheidung von Giftstoffen.", bg: entgiftungBg },
-              { title: "Darmsanierung", desc: "Aufbau eines gesunden Darmmikrobioms in mehreren Phasen.", bg: darmsanierungBg },
-              { title: "Hormonberatung", desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.", bg: hormonberatungBg },
-              { title: "Vitalstoffberatung", desc: "Gezielte Empfehlung von Vitaminen und Mineralstoffen zur Unterstützung.", bg: vitalstoffberatungBg },
-              { title: "Ohrreflextherapie", desc: "Therapie über Reflexpunkte am Ohr zur Unterstützung der Heilung.", bg: ohrreflextherapieBg },
-              { title: "Manuelle Schmerztherapie", desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.", bg: schmerztherapieBg },
-              { title: "Baunscheidtieren", desc: "Alte Therapiemethode zur Mobilisierung der Selbstheilungskräfte über die Haut.", bg: baunscheidtierenBg },
-              { title: "Blutegeltherapie", desc: "Einsatz bei Venenleiden, Arthrosen und Sehnenscheidenentzündungen.", bg: blutegeltherapieBg },
-              { title: "Laboranalysen", desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.", bg: laboranalysenBg },
-            ].map((s) => (
-              <Link
-                key={s.title}
-                to="/methoden"
-                className="group relative flex flex-col items-center justify-center text-center overflow-hidden bg-card shadow-sm border border-border transition-all hover:shadow-md rounded-full aspect-square p-6"
-              >
-                {s.bg && (
-                  <>
-                    <img src={s.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
-                    <div className="absolute inset-0 bg-background/70" />
-                  </>
-                )}
-                <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
-                <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                <span className="relative mt-3 inline-flex text-sm font-medium text-primary group-hover:underline">
-                  Mehr erfahren →
-                </span>
-              </Link>
-            ))}
-          </div>
+          <Link
+            to="/methoden"
+            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
+          >
+            Alle Behandlungen ansehen →
+          </Link>
         </div>
       </section>
 
