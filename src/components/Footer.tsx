@@ -7,9 +7,8 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Praxis für manuelle Therapien & Naturheilkunde<br />
-              Romina Bertoletti Thoma<br />
+            <p className="text-sm text-primary-foreground/80 leading-relaxed text-center">
+              Praxis für manuelle Therapien & Naturheilkunde — Romina Bertoletti Thoma<br />
               Eidg. dipl. Naturheilpraktikerin TEN<br />
               Alte Gfennstrasse 86<br />
               8600 Dübendorf<br />
