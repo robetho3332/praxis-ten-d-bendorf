@@ -404,7 +404,8 @@ function HomePage() {
                 Eidg. dipl. Naturheilpraktikerin TEN<br />
                 Alte Gfennstrasse 86<br />
                 8600 Dübendorf<br />
-                <a href="tel:+41794531716" className="text-primary hover:underline">079 453 17 16</a>
+                <a href="tel:+41794531716" className="text-primary hover:underline">079 453 17 16</a><br />
+                <a href="mailto:r.bertolettithoma@icloud.com" className="text-primary hover:underline">r.bertolettithoma@icloud.com</a>
               </p>
             </div>
 
