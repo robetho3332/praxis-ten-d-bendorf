@@ -42,7 +42,7 @@ function RabattcodesPage() {
           {/* Farfalla */}
           <div className="mb-12">
             <div className="flex justify-center mb-4">
-              <img src={farfallaLogo} alt="Farfalla" className="h-16 object-contain" />
+              <img src={farfallaLogo} alt="Farfalla" className="h-16 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
             </div>
             <h2 className="font-heading text-xl font-semibold text-foreground mb-3 text-center">
               Pflegeprodukte, Ätherische Öle und mehr...
