@@ -4,13 +4,12 @@ import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Start" },
-  { to: "/ueber-mich", label: "Über mich" },
-  { to: "/ablauf", label: "Ablauf" },
-  { to: "/diagnostik", label: "Diagnostik" },
   { to: "/methoden", label: "Angebot" },
-  { to: "/shop", label: "Shop" },
+  { to: "/ablauf", label: "Ablauf" },
   { to: "/rabattcodes", label: "Rabattcodes" },
+  { to: "/ueber-mich", label: "Über mich" },
   { to: "/kontakt", label: "Kontakt" },
+  { to: "/shop", label: "Shop" },
 ] as const;
 
 export function Header() {
