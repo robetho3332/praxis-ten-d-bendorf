@@ -14,15 +14,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
-            <h3 className="font-heading text-lg font-semibold mb-3">Navigation</h3>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><Link to="/ablauf" className="hover:text-primary-foreground transition-colors">Ablauf</Link></li>
-              <li><Link to="/diagnostik" className="hover:text-primary-foreground transition-colors">Diagnostik</Link></li>
-              <li><Link to="/methoden" className="hover:text-primary-foreground transition-colors">Methoden</Link></li>
-              <li><Link to="/shop" className="hover:text-primary-foreground transition-colors">Shop</Link></li>
-            </ul>
-          </div>
+          <div></div>
 
           <div>
             <h3 className="font-heading text-lg font-semibold mb-3">Kontakt</h3>
