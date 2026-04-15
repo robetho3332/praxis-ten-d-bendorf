@@ -99,7 +99,7 @@ const services = [
   {
     title: "Manuelle Schmerztherapie",
     desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.",
-    detail: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat. Diese Therapieform kombiniert verschiedene Handgriffe und Mobilisationstechniken.",
+    detail: "Mit dieser Methode werden durch eine manuelle Drucktechnik, Fehlspannungen abgebaut und bestenfalls aufgelöst. Um die Schmerzlinderung zu unterstützen, zeige ich dir gezielte Übungen für zu Hause",
     bg: schmerztherapieBg,
   },
   {
