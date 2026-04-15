@@ -19,7 +19,7 @@ function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden min-h-[80vh]">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="" className="h-full w-full object-cover object-[center_60%]" width={1920} height={1080} />
+          <img src={heroBg} alt="" className="h-full w-full object-cover object-[center_75%]" width={1920} height={1080} />
           <div className="absolute inset-0 bg-background/60" />
         </div>
         <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-24 md:pt-40 md:pb-32">
