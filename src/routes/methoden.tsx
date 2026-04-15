@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import methodenImg from "@/assets/methoden.jpg";
 import ernaehrungBg from "@/assets/ernaehrung-bg.jpg";
 import massageBg from "@/assets/massage-bg.jpg";
@@ -19,89 +20,111 @@ import laboranalysenBg from "@/assets/laboranalysen-bg.jpg";
 export const Route = createFileRoute("/methoden")({
   head: () => ({
     meta: [
-      { title: "Methoden — Praxis RBT Dübendorf" },
+      { title: "Angebot — Praxis RBT Dübendorf" },
       { name: "description", content: "Massage, Schröpfen, Blutegeltherapie, Dorntherapie, Pflanzenheilkunde, Ernährungsberatung und weitere Naturheilkunde-Methoden." },
-      { property: "og:title", content: "Behandlungsmethoden — Praxis RBT" },
+      { property: "og:title", content: "Behandlungsangebot — Praxis RBT" },
       { property: "og:description", content: "Alle Therapiemethoden der Praxis RBT in Dübendorf." },
     ],
   }),
   component: MethodenPage,
 });
 
-const therapies = [
+const services = [
   {
     title: "Massage",
-    description: "Die klassische Massage ist die traditionellste und am meisten angewandte Massageform. Sie geht hauptsächlich auf die Belastungen des Alltags ein. Sie wirkt wunderbar bei Muskelverspannungen und deren Auswirkungen auf den gesamten Bewegungsapparat. Durch die in der Regel als entspannend empfundene Massage, ist auch ein positiver Einfluss auf die Psyche zu beobachten.",
-    icon: "🤲",
+    desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.",
+    detail: "Die klassische Massage ist die traditionellste und am meisten angewandte Massageform. Sie geht hauptsächlich auf die Belastungen des Alltags ein. Sie wirkt wunderbar bei Muskelverspannungen und deren Auswirkungen auf den gesamten Bewegungsapparat. Durch die in der Regel als entspannend empfundene Massage, ist auch ein positiver Einfluss auf die Psyche zu beobachten.",
+    bg: massageBg,
   },
   {
     title: "Ernährungsberatung",
-    description: "Um funktionieren zu können, braucht unser Körper Nährstoffe – Makronährstoffe wie Fette, Eiweisse und Kohlenhydrate sowie Mikronährstoffe wie Vitamine, Mineralstoffe, Spurenelemente und sekundäre Pflanzenstoffe. In meiner Ernährungsberatung schauen wir uns deine Essgewohnheiten an und besprechen anhand deiner Ziele, was und wie du diese optimieren kannst.",
-    icon: "🥗",
+    desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.",
+    detail: "Um funktionieren zu können, braucht unser Körper Nährstoffe – Makronährstoffe wie Fette, Eiweisse und Kohlenhydrate sowie Mikronährstoffe wie Vitamine, Mineralstoffe, Spurenelemente und sekundäre Pflanzenstoffe. In meiner Ernährungsberatung schauen wir uns deine Essgewohnheiten an und besprechen anhand deiner Ziele, was und wie du diese optimieren kannst.",
+    bg: ernaehrungBg,
   },
   {
     title: "Pflanzenheilkunde",
-    description: "«Gegen jede Krankheit ist ein Kraut gewachsen» \u2013 Seit Jahrhunderten ist die Pflanzenheilkunde Teil der Therapien auf der ganzen Welt. Tinkturen, Tees und pulverisierte Pflanzenteile sind oft Teil meines individuell auf dich abgestimmten Therapiekonzepts.",
-    icon: "🌿",
-  },
-  {
-    title: "Entgiftungsbegleitung",
-    description: "Eine Entgiftungskur hilft dem Körper Giftstoffe wie Pestizide, Geschmacksverstärker, Farb- und Konservierungsstoffe, Umweltgifte, Schwermetalle, Medikamente und Genussmittel aus dem Körper auszuscheiden. Gerne begleite ich dich durch diesen Prozess mit meinem Entgiftungsprogramm.",
-    icon: "✨",
-  },
-  {
-    title: "Darmsanierung",
-    description: "Für mich eine der effektivsten Methoden um gute Voraussetzungen zu schaffen für jegliche Therapien und Ernährungsumstellungen. Die Darmsanierung läuft in mehreren Phasen ab: Entgiftung, Bekämpfung von Pilzen und Parasiten, Unverträglichkeiten ausfindig machen und das Darmmikrobiom stärken.",
-    icon: "🔄",
-  },
-  {
-    title: "Hormonberatung",
-    description: "Sind ein Ungleichgewicht der Hormone verantwortlich für deine Beschwerden? Anhand eines Fragebogens und bei Bedarf einem Speicheltest, welcher bequem zu Hause durchgeführt werden kann, wird ermittelt wie es um deinen Hormonhaushalt steht.",
-    icon: "⚖️",
-  },
-  {
-    title: "Vitalstoffberatung",
-    description: "Ich empfehle Vitalstoffe wenn durch die Ernährung nicht alles abgedeckt wird, in speziellen Lebensphasen oder je nach Alter und Jahreszeit zur Unterstützung. Eine Ausnahme mache ich beim Vitamin D3 (Dauereinnahme) und Vitamin B12 bei vegetarischer/veganer Ernährung.",
-    icon: "💊",
-  },
-  {
-    title: "Ohrreflexzonentherapie",
-    description: "Diverse Reflexpunkte am Ohr sind im Falle einer Störung im korrespondierenden Körpergebiet aktiv und nachweisbar. Mit einem Metallstäbchen werden diese Punkte gesucht und therapiert. Wunderbar unterstützend in Kombination mit anderen Therapien.",
-    icon: "👂",
-  },
-  {
-    title: "Fussreflexzonenmassage",
-    description: "Über die Reflexzonen am Fuss werden die Organe angeregt oder beruhigt. Die Selbstheilungskräfte werden aktiviert, der Lymphfluss und die Durchblutung angeregt. Bei Schlafstörungen, Kopfschmerzen, Verdauungsproblemen, Menstruationsbeschwerden und mehr.",
-    icon: "🦶",
+    desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.",
+    detail: "«Gegen jede Krankheit ist ein Kraut gewachsen» – Seit Jahrhunderten ist die Pflanzenheilkunde Teil der Therapien auf der ganzen Welt. Tinkturen, Tees und pulverisierte Pflanzenteile sind oft Teil meines individuell auf dich abgestimmten Therapiekonzepts.",
+    bg: pflanzenheilkundeBg,
   },
   {
     title: "Schröpfen",
-    description: "Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen. Ausserdem kann direkt bei Schmerzen, Entzündungen und Durchblutungsstörungen Linderung verschafft werden. Die Schröpfkopfmassage lockert das Gewebe und regt den Stoffwechsel an.",
-    icon: "⭕",
+    desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.",
+    detail: "Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen. Ausserdem kann direkt bei Schmerzen, Entzündungen und Durchblutungsstörungen Linderung verschafft werden. Die Schröpfkopfmassage lockert das Gewebe und regt den Stoffwechsel an.",
+    bg: schroepfenBg,
   },
   {
-    title: "Baunscheidtieren",
-    description: "Bei dieser alten Therapiemethode wird die Haut angeraut und ein reizendes Öl aufgetragen. Es entsteht ein Ausschlag, welcher die volle Energie in den Körperbereich bringt und die Selbstheilungskräfte mobilisiert. Sehr wirksam bei Arthrosen, Arthritiden und Lymphstauungen.",
-    icon: "🌡️",
-  },
-  {
-    title: "Blutegeltherapie",
-    description: "Die Blutegeltherapie kann bei Erkrankungen des Venensystems, Hypertonie oder Gichtanfällen eingesetzt werden. Durch Studien belegte Indikationen sind Arthrosen der Knie und Daumensattelgelenke sowie Sehnenscheidenentzündungen.",
-    icon: "💧",
+    title: "Fussreflexzonen",
+    desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.",
+    detail: "Über die Reflexzonen am Fuss werden die Organe angeregt oder beruhigt. Die Selbstheilungskräfte werden aktiviert, der Lymphfluss und die Durchblutung angeregt. Bei Schlafstörungen, Kopfschmerzen, Verdauungsproblemen, Menstruationsbeschwerden und mehr.",
+    bg: fussreflexzonenBg,
   },
   {
     title: "Dorntherapie",
-    description: "Mit dieser sanften Methode werden Nervenbahnen entlastet und die Meridiane positiv beeinflusst. Diese Therapieform gilt als Gesundheitsvorsorge und als Anleitung zur Selbsthilfe – die Selbsthilfeübungen sind das Kernstück dieser Methode.",
-    icon: "🦴",
+    desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.",
+    detail: "Mit dieser sanften Methode werden Nervenbahnen entlastet und die Meridiane positiv beeinflusst. Diese Therapieform gilt als Gesundheitsvorsorge und als Anleitung zur Selbsthilfe – die Selbsthilfeübungen sind das Kernstück dieser Methode.",
+    bg: dorntherapieBg,
   },
   {
-    title: "Haarmineralanalyse",
-    description: "Anhand einer alternativen Austestung wird die Tendenz zu Unverträglichkeiten auf Nahrungsmittel und mögliche Mängel von Mineralstoffen und Vitaminen angezeigt. Vergleichbar mit der Bioresonanz.",
-    icon: "🔬",
+    title: "Entgiftung",
+    desc: "Begleitung durch ein Entgiftungsprogramm zur Ausscheidung von Giftstoffen.",
+    detail: "Eine Entgiftungskur hilft dem Körper Giftstoffe wie Pestizide, Geschmacksverstärker, Farb- und Konservierungsstoffe, Umweltgifte, Schwermetalle, Medikamente und Genussmittel aus dem Körper auszuscheiden. Gerne begleite ich dich durch diesen Prozess mit meinem Entgiftungsprogramm.",
+    bg: entgiftungBg,
+  },
+  {
+    title: "Darmsanierung",
+    desc: "Aufbau eines gesunden Darmmikrobioms in mehreren Phasen.",
+    detail: "Für mich eine der effektivsten Methoden um gute Voraussetzungen zu schaffen für jegliche Therapien und Ernährungsumstellungen. Die Darmsanierung läuft in mehreren Phasen ab: Entgiftung, Bekämpfung von Pilzen und Parasiten, Unverträglichkeiten ausfindig machen und das Darmmikrobiom stärken.",
+    bg: darmsanierungBg,
+  },
+  {
+    title: "Hormonberatung",
+    desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.",
+    detail: "Sind ein Ungleichgewicht der Hormone verantwortlich für deine Beschwerden? Anhand eines Fragebogens und bei Bedarf einem Speicheltest, welcher bequem zu Hause durchgeführt werden kann, wird ermittelt wie es um deinen Hormonhaushalt steht.",
+    bg: hormonberatungBg,
+  },
+  {
+    title: "Vitalstoffberatung",
+    desc: "Gezielte Empfehlung von Vitaminen und Mineralstoffen zur Unterstützung.",
+    detail: "Ich empfehle Vitalstoffe wenn durch die Ernährung nicht alles abgedeckt wird, in speziellen Lebensphasen oder je nach Alter und Jahreszeit zur Unterstützung. Eine Ausnahme mache ich beim Vitamin D3 (Dauereinnahme) und Vitamin B12 bei vegetarischer/veganer Ernährung.",
+    bg: vitalstoffberatungBg,
+  },
+  {
+    title: "Ohrreflextherapie",
+    desc: "Therapie über Reflexpunkte am Ohr zur Unterstützung der Heilung.",
+    detail: "Diverse Reflexpunkte am Ohr sind im Falle einer Störung im korrespondierenden Körpergebiet aktiv und nachweisbar. Mit einem Metallstäbchen werden diese Punkte gesucht und therapiert. Wunderbar unterstützend in Kombination mit anderen Therapien.",
+    bg: ohrreflextherapieBg,
+  },
+  {
+    title: "Manuelle Schmerztherapie",
+    desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.",
+    detail: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat. Diese Therapieform kombiniert verschiedene Handgriffe und Mobilisationstechniken.",
+    bg: schmerztherapieBg,
+  },
+  {
+    title: "Baunscheidtieren",
+    desc: "Alte Therapiemethode zur Mobilisierung der Selbstheilungskräfte über die Haut.",
+    detail: "Bei dieser alten Therapiemethode wird die Haut angeraut und ein reizendes Öl aufgetragen. Es entsteht ein Ausschlag, welcher die volle Energie in den Körperbereich bringt und die Selbstheilungskräfte mobilisiert. Sehr wirksam bei Arthrosen, Arthritiden und Lymphstauungen.",
+    bg: baunscheidtierenBg,
+  },
+  {
+    title: "Blutegeltherapie",
+    desc: "Einsatz bei Venenleiden, Arthrosen und Sehnenscheidenentzündungen.",
+    detail: "Die Blutegeltherapie kann bei Erkrankungen des Venensystems, Hypertonie oder Gichtanfällen eingesetzt werden. Durch Studien belegte Indikationen sind Arthrosen der Knie und Daumensattelgelenke sowie Sehnenscheidenentzündungen.",
+    bg: blutegeltherapieBg,
+  },
+  {
+    title: "Laboranalysen",
+    desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.",
+    detail: "Anhand einer alternativen Austestung wird die Tendenz zu Unverträglichkeiten auf Nahrungsmittel und mögliche Mängel von Mineralstoffen und Vitaminen angezeigt. Vergleichbar mit der Bioresonanz.",
+    bg: laboranalysenBg,
   },
 ];
 
 function MethodenPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <div>
       {/* Hero */}
@@ -111,7 +134,7 @@ function MethodenPage() {
             <img src={methodenImg} alt="Therapiemethoden" className="w-full h-auto object-cover" loading="lazy" width={800} height={600} />
           </div>
           <div className="order-1 md:order-2">
-            <h1 className="font-heading text-4xl font-semibold text-foreground md:text-5xl">Methoden</h1>
+            <h1 className="font-heading text-4xl font-semibold text-foreground md:text-5xl">Angebot</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Bei einer kurzen Anamnese erzählst du mir, was deine aktuellen Beschwerden sind. 
               Wir entscheiden dann gemeinsam, welche Therapiemethode die passende ist.
@@ -125,60 +148,35 @@ function MethodenPage() {
       </section>
 
       {/* Service Circles */}
-      <section className="section-padding bg-secondary/50">
+      <section className="section-padding">
         <div className="mx-auto max-w-6xl">
           <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-12">
             Alle Behandlungen
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: "Massage", desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.", bg: massageBg },
-              { title: "Ernährungsberatung", desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.", bg: ernaehrungBg },
-              { title: "Pflanzenheilkunde", desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.", bg: pflanzenheilkundeBg },
-              { title: "Schröpfen", desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.", bg: schroepfenBg },
-              { title: "Fussreflexzonen", desc: "Aktivierung der Selbstheilungskräfte über die Reflexzonen am Fuss.", bg: fussreflexzonenBg },
-              { title: "Dorntherapie", desc: "Sanfte Methode zur Entlastung von Nervenbahnen und Energiebahnen.", bg: dorntherapieBg },
-              { title: "Entgiftung", desc: "Begleitung durch ein Entgiftungsprogramm zur Ausscheidung von Giftstoffen.", bg: entgiftungBg },
-              { title: "Darmsanierung", desc: "Aufbau eines gesunden Darmmikrobioms in mehreren Phasen.", bg: darmsanierungBg },
-              { title: "Hormonberatung", desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.", bg: hormonberatungBg },
-              { title: "Vitalstoffberatung", desc: "Gezielte Empfehlung von Vitaminen und Mineralstoffen zur Unterstützung.", bg: vitalstoffberatungBg },
-              { title: "Ohrreflextherapie", desc: "Therapie über Reflexpunkte am Ohr zur Unterstützung der Heilung.", bg: ohrreflextherapieBg },
-              { title: "Manuelle Schmerztherapie", desc: "Gezielte manuelle Techniken zur Linderung von Schmerzen im Bewegungsapparat.", bg: schmerztherapieBg },
-              { title: "Baunscheidtieren", desc: "Alte Therapiemethode zur Mobilisierung der Selbstheilungskräfte über die Haut.", bg: baunscheidtierenBg },
-              { title: "Blutegeltherapie", desc: "Einsatz bei Venenleiden, Arthrosen und Sehnenscheidenentzündungen.", bg: blutegeltherapieBg },
-              { title: "Laboranalysen", desc: "Auswertung von Laborwerten zur genauen Bestimmung von Mängeln und Unverträglichkeiten.", bg: laboranalysenBg },
-            ].map((s) => (
-              <div
-                key={s.title}
-                className="group relative flex flex-col items-center justify-center text-center overflow-hidden bg-card shadow-sm border border-border transition-all hover:shadow-md rounded-full aspect-square p-6"
-              >
-                {s.bg && (
-                  <>
-                    <img src={s.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
-                    <div className="absolute inset-0 bg-background/70" />
-                  </>
-                )}
-                <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
-                <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Therapies */}
-      <section className="section-padding">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid gap-6 md:grid-cols-2">
-            {therapies.map((t) => (
-              <div key={t.title} className="rounded-xl bg-card p-6 shadow-sm border border-border">
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl flex-shrink-0">{t.icon}</span>
-                  <div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground">{t.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{t.description}</p>
+            {services.map((s, i) => (
+              <div key={s.title} className="flex flex-col items-center">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className={`group relative flex flex-col items-center justify-center text-center overflow-hidden bg-card shadow-sm border-2 transition-all hover:shadow-md rounded-full aspect-square p-6 w-full cursor-pointer ${
+                    openIndex === i ? "border-primary shadow-md" : "border-border"
+                  }`}
+                >
+                  {s.bg && (
+                    <>
+                      <img src={s.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                      <div className="absolute inset-0 bg-background/70" />
+                    </>
+                  )}
+                  <h3 className="relative font-heading text-lg font-semibold text-foreground">{s.title}</h3>
+                  <p className="relative mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                </button>
+                {openIndex === i && (
+                  <div className="mt-4 w-full rounded-xl bg-card border border-primary/30 p-5 shadow-sm animate-fade-in">
+                    <p className="text-sm text-muted-foreground leading-relaxed">{s.detail}</p>
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
