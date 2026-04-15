@@ -20,20 +20,35 @@ function ImpressumPage() {
 
           <div className="mt-12 space-y-6 text-muted-foreground leading-relaxed">
             <div>
-              <p className="font-semibold text-foreground">Praxis für manuelle Therapien & Naturheilkunde</p>
-              <p>Romina Bertoletti Thoma</p>
-              <p>Eidg. dipl. Naturheilpraktikerin TEN</p>
+              <h2 className="text-lg font-semibold text-foreground">Kontaktadresse</h2>
+              <p className="mt-2">
+                Praxis für manuelle Therapien und Naturheilkunde<br />
+                Romina Bertoletti Thoma<br />
+                Alte Gfennstrasse 86<br />
+                CH-8600 Dübendorf<br />
+                <a href="mailto:info@naturheilkundepraxis-rbt.ch" className="text-primary hover:underline">info@naturheilkundepraxis-rbt.ch</a>
+              </p>
             </div>
 
             <div>
-              <p>Alte Gfennstrasse 86</p>
-              <p>8600 Dübendorf</p>
-              <p>Schweiz</p>
+              <h2 className="text-lg font-semibold text-foreground">Haftungsausschluss</h2>
+              <p className="mt-2">
+                Praxis für manuelle Therapien und Naturheilkunde, Romina Bertoletti Thoma, übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen. Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen. Alle Angebote sind unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.
+              </p>
             </div>
 
             <div>
-              <p>Telefon: <a href="tel:+41794531716" className="text-primary hover:underline">079 453 17 16</a></p>
-              <p>E-Mail: <a href="mailto:r.bertolettithoma@icloud.com" className="text-primary hover:underline">r.bertolettithoma@icloud.com</a></p>
+              <h2 className="text-lg font-semibold text-foreground">Haftung für Links</h2>
+              <p className="mt-2">
+                Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des Nutzers oder der Nutzerin.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-semibold text-foreground">Urheber- und Leistungsschutzrechte</h2>
+              <p className="mt-2">
+                Die auf dieser Website veröffentlichten Inhalte unterliegen dem Schweizerischen Urheberrechtsgesetz. Jede Verwertung bedarf der vorherigen schriftlichen Zustimmung des Anbieters oder jeweiligen Rechteinhabers. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Inhalte und Rechte Dritter sind dabei als solche gekennzeichnet. Die unerlaubte Vervielfältigung oder Weitergabe einzelner Inhalte oder kompletter Seiten ist nicht gestattet und strafbar. Lediglich die Herstellung von Kopien und Downloads für den persönlichen, privaten und nicht kommerziellen Gebrauch ist erlaubt. Die Darstellung dieser Website in fremden Frames ist nur mit schriftlicher Erlaubnis zulässig.
+              </p>
             </div>
           </div>
         </div>
