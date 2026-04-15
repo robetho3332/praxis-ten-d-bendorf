@@ -47,7 +47,7 @@ function UeberMichPage() {
           {/* Google Rezensionen */}
           <div className="mt-10 text-center">
             <a
-              href="https://www.google.com/search?q=romina+bertoletti+thoma"
+              href="https://share.google/zRZjA6i19n3Ie5RmB"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
