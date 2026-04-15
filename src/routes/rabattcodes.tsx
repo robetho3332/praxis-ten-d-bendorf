@@ -96,7 +96,7 @@ function RabattcodesPage() {
           {/* Zimmerli Adaptogene */}
           <div className="mb-12">
             <div className="flex justify-center mb-4">
-              <img src={zimmerliLogo} alt="Zimmerli Adaptogene" className="h-16 object-contain" />
+              <img src={zimmerliLogo} alt="Zimmerli Adaptogene" className="h-16 object-contain mix-blend-multiply dark:mix-blend-screen dark:invert" />
             </div>
             <h2 className="font-heading text-xl font-semibold text-foreground mb-3 text-center">
               Adaptogene Teemischungen, Pulver und Kapseln
