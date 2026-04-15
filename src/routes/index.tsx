@@ -65,23 +65,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="section-padding bg-secondary/50">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-heading text-3xl font-semibold text-foreground md:text-4xl mb-4">
-            Mein Angebot
-          </h2>
-          <p className="text-muted-foreground mb-8">
-            Stundenansatz für manuelle Therapien & Naturheilkunde: <strong className="text-foreground">Fr. 147.00</strong>
-          </p>
-          <Link
-            to="/methoden"
-            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
-          >
-            Alle Behandlungen ansehen →
-          </Link>
-        </div>
-      </section>
 
       {/* EMR Info */}
       <section className="section-padding">
