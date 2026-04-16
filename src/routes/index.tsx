@@ -221,6 +221,14 @@ function HomePage() {
             <p className="text-muted-foreground leading-relaxed text-center mt-4">
               Bist du interessiert, dann melde dich für ein Erstgespräch.
             </p>
+            <div className="flex justify-center mt-6">
+              <a
+                href="#kontakt"
+                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
+              >
+                Termin buchen
+              </a>
+            </div>
           </div>
         </div>
       </section>
