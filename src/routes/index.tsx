@@ -450,7 +450,7 @@ function HomePage() {
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">E-Mail</label>
-              <input type="email" id="email" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="ihre@email.ch" />
+              <input type="email" id="email" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="hallo@email.ch" />
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1">Telefon</label>
