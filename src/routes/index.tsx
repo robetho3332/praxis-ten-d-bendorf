@@ -186,7 +186,7 @@ function HomePage() {
       <section id="start" className="section-padding bg-secondary/50 scroll-mt-48">
         <div className="mx-auto max-w-4xl space-y-12">
           <div>
-            <h2 className="font-heading text-center text-2xl font-semibold text-foreground md:text-3xl mb-6">
+            <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl mb-6">
               Manuelle Therapien
             </h2>
             <p className="text-muted-foreground leading-relaxed text-center">
