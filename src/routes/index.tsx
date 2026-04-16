@@ -182,6 +182,38 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Start */}
+      <section id="start" className="section-padding scroll-mt-48">
+        <div className="mx-auto max-w-4xl space-y-12">
+          <div>
+            <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-6">
+              Manuelle Therapien
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-center">
+              Schmerzen im Bewegungsapparat sind schon fast zu einer Volkskrankheit geworden. Bei einer kurzen Anamnese, erzählst du mir was deine aktuellen Beschwerden sind, wir entscheiden dann gemeinsam welche Therapiemethode die passende ist.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-center mt-4">
+              Oder möchtest du einfach bei einer Massage oder Reflexzonentherapie entspannen? Melde dich gerne für einen Termin.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-2">
+              Naturheilkunde
+            </h2>
+            <h3 className="font-heading text-center text-xl text-muted-foreground mb-6">
+              Traditionelle Europäische Naturheilkunde
+            </h3>
+            <p className="text-muted-foreground leading-relaxed text-center">
+              Bei einem ausführlichen Erstgespräch, schauen wir uns gemeinsam deine Krankheitsgeschichte an, dabei geht es nicht nur um die aktuellen Beschwerden sondern um eine ganzheitliche Erfassung von dir als Person. Wir besprechen deine Therapieziele und was in der aktuellen Situation umsetzbar ist. Anhand einer Zungen, Puls und Irisdiagnose ermittle ich deine Konstitution, welche in den Therapieplan miteinbezogen wird. Bei Bedarf kann eine externe Labordiagnostik durchgeführt werden. Nach dem ich deinen persönlichen Therapieplan erstellt habe, besprechen wir diesen und vereinbaren dementsprechende Termine.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-center mt-4">
+              Bist du interessiert, dann melde dich für ein Erstgespräch.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Angebot */}
       <section id="angebot" className="section-padding scroll-mt-48">
         <div className="mx-auto max-w-6xl">
