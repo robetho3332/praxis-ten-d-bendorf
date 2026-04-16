@@ -3,6 +3,7 @@ import { useState } from "react";
 import logo from "@/assets/logo.png";
 
 const anchorItems = [
+  { href: "#start", label: "Start" },
   { href: "#angebot", label: "Angebot" },
   { href: "#abrechnung", label: "Abrechnung" },
   { href: "#rabattcodes", label: "Rabattcodes" },
