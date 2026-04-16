@@ -186,9 +186,10 @@ function HomePage() {
       <section id="start" className="section-padding bg-secondary/50 scroll-mt-48">
         <div className="mx-auto max-w-4xl space-y-12">
           <div>
-            <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl mb-6">
+            <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl">
               Manuelle Therapien
             </h2>
+            <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-6" />
             <p className="text-muted-foreground leading-relaxed text-center">
               Schmerzen im Bewegungsapparat sind schon fast zu einer Volkskrankheit geworden. Bei einer kurzen Anamnese, erzählst du mir was deine aktuellen Beschwerden sind, wir entscheiden dann gemeinsam welche Therapiemethode die passende ist.
             </p>
@@ -209,9 +210,10 @@ function HomePage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl mb-2">
+            <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl">
               Naturheilkunde
             </h2>
+            <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-2" />
             <p className="text-muted-foreground leading-relaxed text-center">
               Bei einem ausführlichen Erstgespräch, schauen wir uns gemeinsam deine Krankheitsgeschichte an, dabei geht es nicht nur um die aktuellen Beschwerden sondern um eine ganzheitliche Erfassung von dir als Person. Wir besprechen deine Therapieziele und was in der aktuellen Situation umsetzbar ist. Anhand einer Zungen, Puls und Irisdiagnose ermittle ich deine Konstitution, welche in den Therapieplan miteinbezogen wird. Bei Bedarf kann eine externe Labordiagnostik durchgeführt werden. Nach dem ich deinen persönlichen Therapieplan erstellt habe, besprechen wir diesen und vereinbaren dementsprechende Termine.
             </p>
@@ -233,9 +235,10 @@ function HomePage() {
       {/* Angebot */}
       <section id="angebot" className="section-padding scroll-mt-48">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl mb-12">
+          <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl">
             Angebot
           </h2>
+          <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-12" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <div
@@ -277,9 +280,10 @@ function HomePage() {
       {/* Abrechnung */}
       <section id="abrechnung" className="section-padding bg-secondary/50 scroll-mt-48">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl mb-6">
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl">
             Abrechnung
           </h2>
+          <div className="mt-4 h-0.5 w-16 bg-primary mb-6" />
           <p className="text-muted-foreground leading-relaxed">
             Stundenansatz für manuelle Therapien & Naturheilkunde: <strong className="text-foreground">Fr. 147.00</strong>
           </p>
@@ -289,6 +293,7 @@ function HomePage() {
           <h3 className="font-heading text-xl font-semibold text-foreground md:text-2xl mt-12">
             Zusatzversicherung
           </h3>
+          <div className="mt-4 h-0.5 w-16 bg-primary" />
           <p className="mt-4 text-muted-foreground leading-relaxed">
             Ich bin beim EMR unter der ZSR Nr. M100663 registriert. Bitte erkundige dich im Voraus 
             bei deinem Krankenversicherer, ob die Behandlung von der Zusatzversicherung übernommen wird. 
@@ -308,9 +313,10 @@ function HomePage() {
       {/* Rabattcodes */}
       <section id="rabattcodes" className="section-padding scroll-mt-48">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl mb-6">
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl">
             Rabattcodes
           </h2>
+          <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-6" />
           <div className="text-muted-foreground leading-relaxed mb-12">
             <p>
               Bestellungen der folgenden Produkte, werden ab einem Mindestbestellwert von <strong className="text-foreground">Fr. 70.00</strong>, portofrei an eine Adresse in der Schweiz geliefert.
@@ -417,7 +423,8 @@ function HomePage() {
       {/* Über mich */}
       <section id="ueber-mich" className="section-padding bg-secondary/50 scroll-mt-48">
         <div className="mx-auto max-w-4xl">
-          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl text-center mb-10">Über mich</h2>
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl text-center">Über mich</h2>
+          <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-10" />
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex-1 text-center md:text-left">
               <p className="text-muted-foreground text-lg leading-loose">
