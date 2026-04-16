@@ -458,7 +458,7 @@ function HomePage() {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">Nachricht</label>
-              <textarea id="message" rows={4} className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Ihre Nachricht..." />
+              <textarea id="message" rows={4} className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Dein Name" />
             </div>
             <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90">
               Nachricht senden
