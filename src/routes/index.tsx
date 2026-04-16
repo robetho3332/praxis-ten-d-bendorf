@@ -313,7 +313,7 @@ function HomePage() {
       {/* Rabattcodes */}
       <section id="rabattcodes" className="section-padding scroll-mt-48">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl">
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl text-center">
             Rabattcodes
           </h2>
           <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-6" />
