@@ -183,7 +183,7 @@ function HomePage() {
       </section>
 
       {/* Start */}
-      <section id="start" className="section-padding scroll-mt-48">
+      <section id="start" className="section-padding bg-secondary/50 scroll-mt-48">
         <div className="mx-auto max-w-4xl space-y-12">
           <div>
             <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-6">
