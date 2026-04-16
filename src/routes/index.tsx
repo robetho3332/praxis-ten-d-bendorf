@@ -286,7 +286,7 @@ function HomePage() {
           <p className="text-muted-foreground leading-relaxed mt-4">
             Bei nicht erscheinen oder Absage des Termins weniger als 24h vorher, wird der Behandlungspreis in Rechnung gestellt.
           </p>
-          <h3 className="font-heading text-2xl font-semibold text-foreground md:text-3xl mt-12">
+          <h3 className="font-heading text-lg font-semibold text-foreground md:text-xl mt-12">
             Zusatzversicherung
           </h3>
           <p className="mt-4 text-muted-foreground leading-relaxed">
