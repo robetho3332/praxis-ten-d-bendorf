@@ -193,8 +193,19 @@ function HomePage() {
               Schmerzen im Bewegungsapparat sind schon fast zu einer Volkskrankheit geworden. Bei einer kurzen Anamnese, erzählst du mir was deine aktuellen Beschwerden sind, wir entscheiden dann gemeinsam welche Therapiemethode die passende ist.
             </p>
             <p className="text-muted-foreground leading-relaxed text-center mt-4">
-              Oder möchtest du einfach bei einer Massage oder Reflexzonentherapie entspannen? Melde dich gerne für einen Termin.
+              Oder möchtest du einfach bei einer Massage oder Reflexzonentherapie entspannen?
             </p>
+            <p className="text-muted-foreground leading-relaxed text-center mt-4">
+              Melde dich gerne für einen Termin.
+            </p>
+            <div className="flex justify-center mt-6">
+              <a
+                href="#kontakt"
+                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
+              >
+                Termin buchen
+              </a>
+            </div>
           </div>
 
           <div>
