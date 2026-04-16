@@ -209,7 +209,7 @@ function HomePage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-2">
+            <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl mb-2">
               Naturheilkunde
             </h2>
             <p className="text-muted-foreground leading-relaxed text-center">
@@ -233,7 +233,7 @@ function HomePage() {
       {/* Angebot */}
       <section id="angebot" className="section-padding scroll-mt-48">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-12">
+          <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl mb-12">
             Angebot
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -277,7 +277,7 @@ function HomePage() {
       {/* Abrechnung */}
       <section id="abrechnung" className="section-padding bg-secondary/50 scroll-mt-48">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-3xl font-semibold text-foreground md:text-4xl mb-6">
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl mb-6">
             Abrechnung
           </h2>
           <p className="text-muted-foreground leading-relaxed">
@@ -308,7 +308,7 @@ function HomePage() {
       {/* Rabattcodes */}
       <section id="rabattcodes" className="section-padding scroll-mt-48">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-3xl font-semibold text-foreground md:text-4xl mb-6">
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl mb-6">
             Rabattcodes
           </h2>
           <div className="text-muted-foreground leading-relaxed mb-12">
@@ -441,7 +441,7 @@ function HomePage() {
       {/* Kontakt */}
       <section id="kontakt" className="section-padding scroll-mt-48">
         <div className="mx-auto max-w-4xl">
-          <h2 className="font-heading text-4xl font-semibold text-foreground md:text-5xl text-center">Kontakt</h2>
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl text-center">Kontakt</h2>
           <div className="mt-4 h-0.5 w-16 bg-primary mx-auto" />
 
           <div className="mt-12 space-y-6">
