@@ -417,6 +417,7 @@ function HomePage() {
       {/* Über mich */}
       <section id="ueber-mich" className="section-padding bg-secondary/50 scroll-mt-48">
         <div className="mx-auto max-w-4xl">
+          <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl text-center mb-10">Über mich</h2>
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex-1 text-center md:text-left">
               <p className="text-muted-foreground text-lg leading-loose">
