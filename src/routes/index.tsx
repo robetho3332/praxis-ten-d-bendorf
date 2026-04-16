@@ -212,9 +212,6 @@ function HomePage() {
             <h2 className="font-heading text-center text-3xl font-semibold text-foreground md:text-4xl mb-2">
               Naturheilkunde
             </h2>
-            <h3 className="font-heading text-center text-xl text-muted-foreground mb-6">
-              Traditionelle Europäische Naturheilkunde
-            </h3>
             <p className="text-muted-foreground leading-relaxed text-center">
               Bei einem ausführlichen Erstgespräch, schauen wir uns gemeinsam deine Krankheitsgeschichte an, dabei geht es nicht nur um die aktuellen Beschwerden sondern um eine ganzheitliche Erfassung von dir als Person. Wir besprechen deine Therapieziele und was in der aktuellen Situation umsetzbar ist. Anhand einer Zungen, Puls und Irisdiagnose ermittle ich deine Konstitution, welche in den Therapieplan miteinbezogen wird. Bei Bedarf kann eine externe Labordiagnostik durchgeführt werden. Nach dem ich deinen persönlichen Therapieplan erstellt habe, besprechen wir diesen und vereinbaren dementsprechende Termine.
             </p>
