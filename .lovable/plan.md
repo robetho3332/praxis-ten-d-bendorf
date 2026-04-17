@@ -1,36 +1,47 @@
 
 
-## Plan: Shopify-Konto verbinden & erstes Testprodukt anlegen
+## Ziel
+Die statische `/shop`-Seite durch eine echte Shopify-Produktanzeige ersetzen, die deine hochgeladenen Produkte (inkl. der neuen Bilder) live aus Shopify lädt.
 
-### Was passiert, sobald du diesen Plan bestätigst
+## Was jetzt gemacht wird
 
-**Schritt 1 — Shopify-Verbindung starten**
-- Ich öffne den Shopify-Connect-Flow für deinen **bestehenden** Shop
-- Du wirst nach deiner Shopify-Admin-URL gefragt (Format: `deinshop.myshopify.com`)
-- Du autorisierst Lovable mit einem Klick im Shopify-Login
-- Danach hat Lovable Zugriff, um Produkte/Bilder/Preise direkt in deinem Shop anzulegen
+**1. Shopify-Zugangsdaten einrichten**
+- Store-Domain via `shopify--get_shop_permanent_domain` holen
+- Storefront-Token via `shopify--get_storefront_token` holen
+- Konstanten in `src/lib/shopify.ts` ablegen (API-Version `2025-07`)
 
-**Schritt 2 — AgeAway Shot als Testprodukt anlegen**
-- Produktname: **AgeAway Shot**
-- Artikelnummer: **279**
-- Preis: **CHF 149.70** (mittlere Preisstufe deiner Endkundenliste)
-- Beschreibung, Inhaltsstoffe, Einnahmeempfehlung — aus dem Datenblatt-PDF
-- Produktbild — extrahiert aus dem PDF
-- Sichtbarkeit: zunächst als **Entwurf** (nicht öffentlich), bis du es freigibst
+**2. Shop-Seite (`src/routes/shop.tsx`) umbauen**
+- Hardcodierte `categories`-Liste entfernen
+- Per GraphQL Storefront API echte Produkte laden (Titel, Bild, Preis, Beschreibung, Handle)
+- Produktkarten zeigen: Bild, Titel, Preis (CHF), Kurzbeschreibung
+- Jede Karte verlinkt zur Detailseite `/product/$handle`
+- "In den Warenkorb"-Button pro Karte
+- Leerer Zustand: "Keine Produkte gefunden" falls API leer
 
-**Schritt 3 — Du kontrollierst in Shopify**
-- Du öffnest dein Shopify-Admin und prüfst: Stimmen Texte, Preis, Bild?
-- Falls etwas nicht passt → wir korrigieren BEVOR die anderen ~100 Produkte folgen
+**3. Produkt-Detailseite `src/routes/product.$handle.tsx`**
+- Einzelprodukt via Handle laden
+- Bildergalerie, voller Beschreibungstext, Variantenauswahl, Preis
+- "In den Warenkorb"-Button
 
-### Was passiert NICHT in diesem Schritt
-- Die `/shop`-Seite hier in Lovable wird **noch nicht** verändert
-- Es wird **kein** neuer Entwicklungsshop angelegt (du nutzt deinen bestehenden)
-- Es entstehen **keine** zusätzlichen Shopify-Kosten durch das Verbinden
+**4. Warenkorb-System**
+- Zustand-Store `src/stores/cart.ts` (Items, add/remove/update)
+- Cart-Drawer-Komponente (Sheet) mit Zusammenfassung
+- Cart-Icon im Header mit Badge (Anzahl Artikel)
+- Checkout-Button erstellt Shopify-Cart via Storefront API und öffnet Checkout-URL (mit `channel=online_store`) in neuem Tab
 
-### Voraussetzung von dir
-- Deine Shopify-Admin-URL bereithalten (z. B. `praxis-rbt.myshopify.com`)
-- Im Shopify-Login eingeloggt sein, damit die Autorisierung schnell geht
+**5. Hero-Bereich der Shop-Seite beibehalten**
+- Bestehendes Hero-Bild und Einleitungstext bleiben
+- Darunter das neue dynamische Produktraster
 
-### Nach erfolgreicher Verbindung
-Sobald das AgeAway Shot in deinem Shopify steht und du es abgenickt hast, gehen wir in den nächsten Schritt: Storefront in Lovable umbauen, sodass die echten Shopify-Produkte angezeigt werden statt der aktuellen statischen Kategorien.
+## Technische Details
+- `@tanstack/react-query` für Produkt-Fetches (Caching, SSR-Loader)
+- Loader in Route ruft `queryClient.ensureQueryData` auf
+- QueryClientProvider muss in `__root.tsx` eingerichtet werden (falls noch nicht vorhanden — prüfen)
+- Zustand für Cart-State (persist in localStorage)
+- Cart-Drawer nutzt bestehende `ui/sheet.tsx`
+
+## Nicht Teil dieses Schritts
+- Keine Mock-Produkte, keine Fake-Reviews
+- Keine Änderungen an anderen Seiten (Impressum, Datenschutz, Index)
+- Rabattcodes-Integration (kommt später, falls gewünscht)
 
