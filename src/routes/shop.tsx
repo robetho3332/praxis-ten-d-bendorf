@@ -106,13 +106,13 @@ function ShopPage() {
       </section>
 
       {/* Kategorien */}
-      <section className="section-padding">
+      <section className="px-6 py-6 md:px-12 md:py-8 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-heading text-center text-xl font-semibold text-foreground md:text-2xl">
+          <h2 className="font-heading text-center text-lg font-semibold text-foreground md:text-xl">
             Kategorien
           </h2>
-          <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-12" />
-          <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-2 h-0.5 w-16 bg-primary mx-auto mb-6" />
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-w-3xl mx-auto">
             {CATEGORIES.map((c, i) => {
               const isActive = activeCategory === c.key;
               return (
