@@ -91,9 +91,9 @@ function ShopPage() {
     <div>
       <section className="px-6 py-3 md:px-12 md:py-4 lg:px-20 bg-secondary/50">
         <div className="mx-auto max-w-6xl">
-          <div className="h-0.5 w-16 bg-primary mb-2" />
           <h1 className="font-heading text-xl font-semibold text-foreground md:text-2xl">Shop</h1>
-          <p className="mt-1 text-xs md:text-sm text-muted-foreground leading-relaxed">
+          <div className="mt-2 h-0.5 w-16 bg-primary" />
+          <p className="mt-3 text-xs md:text-sm text-muted-foreground leading-relaxed">
             Ausgewählte Naturprodukte für Ihre Gesundheit. Bestellen Sie bequem online oder
             erhalten Sie die Produkte direkt in der Praxis.
           </p>
