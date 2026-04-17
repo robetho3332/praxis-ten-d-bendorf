@@ -253,12 +253,9 @@ function HomePage() {
                   }`}
                 >
                   {s.bg && (
-                    <>
-                      <img src={s.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
-                      <div className="absolute inset-0 bg-background/70" />
-                    </>
+                    <img src={s.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
                   )}
-                  <h3 className="relative font-heading text-2xl font-semibold text-foreground">{s.title}</h3>
+                  <h3 className="relative font-heading text-2xl font-semibold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{s.title}</h3>
                 </div>
                 <div
                   className={`absolute inset-0 flex flex-col items-center justify-center text-center rounded-xl bg-primary/10 border border-primary/30 p-6 transition-opacity duration-300 ${
