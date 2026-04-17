@@ -1,7 +1,10 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { useCartSync } from "@/hooks/useCartSync";
 
 import appCss from "../styles.css?url";
 
@@ -71,14 +74,23 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const [queryClient] = useState(() => new QueryClient());
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-1">
-        <Outlet />
-      </main>
-      <Footer />
-      <CookieBanner />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <CartSyncBridge />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+        <CookieBanner />
+      </div>
+    </QueryClientProvider>
   );
+}
+
+function CartSyncBridge() {
+  useCartSync();
+  return null;
 }
