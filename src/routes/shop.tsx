@@ -89,18 +89,18 @@ function ShopPage() {
 
   return (
     <div>
-      <section className="px-6 py-6 md:px-12 md:py-8 lg:px-20 bg-secondary/50">
-        <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2 items-center">
+      <section className="px-6 py-3 md:px-12 md:py-4 lg:px-20 bg-secondary/50">
+        <div className="mx-auto max-w-6xl grid gap-4 md:grid-cols-2 items-center">
           <div>
-            <div className="h-0.5 w-16 bg-primary mb-3" />
-            <h1 className="font-heading text-2xl font-semibold text-foreground md:text-3xl">Shop</h1>
-            <p className="mt-2 text-sm md:text-base text-muted-foreground leading-relaxed">
+            <div className="h-0.5 w-16 bg-primary mb-2" />
+            <h1 className="font-heading text-xl font-semibold text-foreground md:text-2xl">Shop</h1>
+            <p className="mt-1 text-xs md:text-sm text-muted-foreground leading-relaxed">
               Ausgewählte Naturprodukte für Ihre Gesundheit. Bestellen Sie bequem online oder
               erhalten Sie die Produkte direkt in der Praxis.
             </p>
           </div>
-          <div className="rounded-xl overflow-hidden shadow-md max-h-40 md:max-h-48">
-            <img src={shopImg} alt="Naturprodukte Shop" className="w-full h-full object-cover" width={800} height={300} />
+          <div className="rounded-xl overflow-hidden shadow-md max-h-24 md:max-h-32">
+            <img src={shopImg} alt="Naturprodukte Shop" className="w-full h-full object-cover" width={800} height={200} />
           </div>
         </div>
       </section>
