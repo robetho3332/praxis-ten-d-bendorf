@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import shopImg from "@/assets/shop.jpg";
+
 import catSupplements from "@/assets/cat-supplements.jpg";
 import catProtein from "@/assets/cat-protein.jpg";
 import catAdaptogens from "@/assets/cat-adaptogens.jpg";
@@ -90,18 +90,13 @@ function ShopPage() {
   return (
     <div>
       <section className="px-6 py-3 md:px-12 md:py-4 lg:px-20 bg-secondary/50">
-        <div className="mx-auto max-w-6xl grid gap-4 md:grid-cols-2 items-center">
-          <div>
-            <div className="h-0.5 w-16 bg-primary mb-2" />
-            <h1 className="font-heading text-xl font-semibold text-foreground md:text-2xl">Shop</h1>
-            <p className="mt-1 text-xs md:text-sm text-muted-foreground leading-relaxed">
-              Ausgewählte Naturprodukte für Ihre Gesundheit. Bestellen Sie bequem online oder
-              erhalten Sie die Produkte direkt in der Praxis.
-            </p>
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-md max-h-24 md:max-h-32">
-            <img src={shopImg} alt="Naturprodukte Shop" className="w-full h-full object-cover" width={800} height={200} />
-          </div>
+        <div className="mx-auto max-w-6xl">
+          <div className="h-0.5 w-16 bg-primary mb-2" />
+          <h1 className="font-heading text-xl font-semibold text-foreground md:text-2xl">Shop</h1>
+          <p className="mt-1 text-xs md:text-sm text-muted-foreground leading-relaxed">
+            Ausgewählte Naturprodukte für Ihre Gesundheit. Bestellen Sie bequem online oder
+            erhalten Sie die Produkte direkt in der Praxis.
+          </p>
         </div>
       </section>
 
