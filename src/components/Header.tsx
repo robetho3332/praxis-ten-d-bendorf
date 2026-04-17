@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+import { CartDrawer } from "@/components/CartDrawer";
 
 const anchorItems = [
   { href: "#start", label: "Start" },
@@ -63,11 +64,17 @@ export function Header() {
             </Link>
           </nav>
 
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-foreground ml-auto"
-            aria-label="Menü öffnen"
-          >
+          <div className="hidden md:block absolute right-18">
+            <CartDrawer />
+          </div>
+
+          <div className="md:hidden ml-auto flex items-center gap-2">
+            <CartDrawer />
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-foreground"
+              aria-label="Menü öffnen"
+            >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               {mobileOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
