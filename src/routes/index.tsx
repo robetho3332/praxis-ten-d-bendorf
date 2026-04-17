@@ -499,19 +499,19 @@ function HomePage() {
           }}>
             <div>
               <label htmlFor="name" className="block text-sm font-light text-muted-foreground mb-1">Name</label>
-              <input type="text" id="name" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Dein Name" />
+              <input type="text" id="name" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 placeholder:font-light focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Dein Name" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-light text-muted-foreground mb-1">E-Mail</label>
-              <input type="email" id="email" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="hallo@email.ch" />
+              <input type="email" id="email" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 placeholder:font-light focus:outline-none focus:ring-2 focus:ring-ring" placeholder="hallo@email.ch" />
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-light text-muted-foreground mb-1">Telefon</label>
-              <input type="tel" id="phone" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="079 123 45 67" />
+              <input type="tel" id="phone" className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 placeholder:font-light focus:outline-none focus:ring-2 focus:ring-ring" placeholder="079 123 45 67" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-light text-muted-foreground mb-1">Nachricht</label>
-              <textarea id="message" rows={4} className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Deine Nachricht" />
+              <textarea id="message" rows={4} className="w-full rounded-lg border border-input bg-card px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 placeholder:font-light focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Deine Nachricht" />
             </div>
             <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90">
               Nachricht senden
