@@ -22,6 +22,8 @@ export interface ShopifyProductNode {
   description: string;
   descriptionHtml?: string;
   handle: string;
+  productType?: string;
+  tags?: string[];
   priceRange: { minVariantPrice: { amount: string; currencyCode: string } };
   images: { edges: Array<{ node: ShopifyImage }> };
   variants: { edges: Array<{ node: ShopifyVariant }> };
@@ -67,6 +69,8 @@ export const PRODUCTS_QUERY = `
           title
           description
           handle
+          productType
+          tags
           priceRange { minVariantPrice { amount currencyCode } }
           images(first: 5) { edges { node { url altText } } }
           variants(first: 10) {
