@@ -38,7 +38,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="mx-auto max-w-6xl px-18 py-4">
-        <div className="flex justify-center mb-2">
+        <div className="flex justify-center -mb-2">
           <Link to="/">
             <img src={logo} alt="Praxis RBT — Romina Bertoletti Thoma" className="h-40 w-auto -mt-4" />
           </Link>
