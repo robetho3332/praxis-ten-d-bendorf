@@ -40,7 +40,7 @@ export function Header() {
       <div className="mx-auto max-w-6xl px-18 py-4">
         <div className="flex justify-center -mb-2">
           <Link to="/">
-            <img src={logo} alt="Praxis RBT — Romina Bertoletti Thoma" className="h-40 w-auto -mt-4" />
+            <img src={logo} alt="Praxis RBT — Romina Bertoletti Thoma" className="h-40 w-auto -mt-6" />
           </Link>
         </div>
         <div className="flex items-center justify-between">
