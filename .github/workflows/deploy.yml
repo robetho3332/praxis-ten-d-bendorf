@@ -19,13 +19,17 @@ jobs:
           node-version: 20
       
       - name: Install dependencies
-        run: npm install  # ← geändert von npm ci zu npm install
+        run: npm install
       
       - name: Build
         run: npm run build
       
+      - name: List build output (Debug)
+        run: ls -la dist/
+      
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          folder: dist
-          branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
