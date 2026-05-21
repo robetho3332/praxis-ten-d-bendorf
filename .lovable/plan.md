@@ -1,37 +1,21 @@
 ## Problem
 
-Auf `naturheilkundepraxis-rbt.lovable.app` erscheint nur Text – keine Styles, keine Bilder.
+Auf `naturheilkundepraxis-rbt.lovable.app` erscheint ein 404.
 
-Ursache: In `vite.config.ts` ist `base: '/praxis-ten-d-bendorf/'` gesetzt. Das ist ein GitHub-Pages-spezifischer Pfad. Der Browser sucht dadurch alle CSS-/JS-Dateien unter `naturheilkundepraxis-rbt.lovable.app/praxis-ten-d-bendorf/...` – dort liegen sie aber nicht, weil Lovable direkt unter der Domain-Root ausliefert.
-
-Genau dasselbe Problem würdest du übrigens auch auf Cloudflare Pages haben.
+Ursache: Die veröffentlichte (live) Version ist noch der alte Build mit `base: '/praxis-ten-d-bendorf/'`. Der Fix in `vite.config.ts` ist im Code drin, aber **nicht auf der Live-Seite deployt** – dafür muss einmal manuell auf **Publish → Update** geklickt werden. Code-Änderungen aktualisieren nur das Preview, nicht die veröffentlichte Domain.
 
 ## Lösung
 
-Den `base`-Eintrag aus `vite.config.ts` entfernen, sodass die Datei wieder die Standard-Root `/` verwendet.
+1. Oben rechts auf **Publish → Update** klicken
+2. Warten, bis "Published" grün anzeigt
+3. `naturheilkundepraxis-rbt.lovable.app` neu laden (Hard-Reload: Cmd/Ctrl + Shift + R)
 
-**Vorher:**
-```ts
-export default defineConfig({
-  vite: {
-    base: '/praxis-ten-d-bendorf/',
-  }
-});
-```
+## Zusätzlicher Check
 
-**Nachher:**
-```ts
-export default defineConfig({});
-```
+Im Repo liegt noch `.github/workflows/deploy.yml`, der bei jedem Push nach `main` einen GitHub-Pages-Build auslöst. Das stört die `lovable.app`-Domain nicht, kann aber später für Verwirrung sorgen, falls du GitHub Pages nicht (mehr) nutzt. Sag Bescheid, wenn ich den Workflow entfernen soll.
 
-## Auswirkung
+## Falls nach dem Update immer noch 404
 
-- ✅ `naturheilkundepraxis-rbt.lovable.app` lädt Styles, Bilder und JS korrekt
-- ✅ Funktioniert genauso später auf Cloudflare Pages oder einer eigenen Domain
-- ⚠️ Falls du das Projekt **trotzdem** noch zusätzlich auf GitHub Pages unter `username.github.io/praxis-ten-d-bendorf/` deployen willst, müsste der `base`-Pfad dort über eine separate Build-Variable gesetzt werden. Sag Bescheid, falls das nötig ist – dann baue ich das sauber ein.
-
-## Nach dem Fix
-
-1. Lovable baut das Projekt neu
-2. Du klickst oben rechts auf **Publish → Update**, damit die Live-Seite aktualisiert wird
-3. `naturheilkundepraxis-rbt.lovable.app` neu laden (ggf. Hard-Reload: Cmd/Ctrl + Shift + R)
+Dann liegt es nicht am `base`-Pfad, sondern daran, dass die veröffentlichte Version komplett fehlt oder der Build fehlgeschlagen ist. In dem Fall:
+- mir kurz Bescheid geben
+- ich prüfe die Build-Logs und die Routen-Struktur (`src/routes/index.tsx` existiert und ist korrekt mit `createFileRoute("/")` registriert – das passt)
