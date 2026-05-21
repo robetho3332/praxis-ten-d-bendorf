@@ -1,1 +1,0 @@
-import{j as n,L as t}from"./index-C8v-1ir-.js";const o=()=>n.jsxs("div",{className:"mx-auto max-w-2xl section-padding text-center",children:[n.jsx("h1",{className:"font-heading text-3xl",children:"Produkt nicht gefunden"}),n.jsx(t,{to:"/shop",className:"mt-4 inline-block text-primary hover:underline",children:"Zurück zum Shop"})]});export{o as notFoundComponent};
