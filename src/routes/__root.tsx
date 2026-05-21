@@ -42,6 +42,12 @@ export const Route = createRootRoute({
       { name: "author", content: "Romina Bertoletti Thoma" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:title", content: "Praxis RBT — Naturheilkunde TEN Dübendorf" },
+      { name: "twitter:title", content: "Praxis RBT — Naturheilkunde TEN Dübendorf" },
+      { property: "og:description", content: "Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf." },
+      { name: "twitter:description", content: "Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bd0b6f9-bd95-4e7b-9a53-5296c55a477f/id-preview-7c8198d4--7d4bb433-8a08-4f7b-b5b2-e465e718b57d.lovable.app-1779220280078.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8bd0b6f9-bd95-4e7b-9a53-5296c55a477f/id-preview-7c8198d4--7d4bb433-8a08-4f7b-b5b2-e465e718b57d.lovable.app-1779220280078.png" },
     ],
     links: [
       {
