@@ -31,6 +31,9 @@ const faqs = [
     q: "Aus welchem Gebiet kommen deine Klientinnen und Klienten?",
     a: "Die Praxis liegt in Dübendorf an der Alten Gfennstrasse 86 und ist gut erreichbar aus Dübendorf, Volketswil, Uster, Schwerzenbach, Wangen-Brüttisellen, Wallisellen und der Stadt Zürich.",
   },
+];
+
+
 
 
 export const Route = createFileRoute("/hormonberatung")({
