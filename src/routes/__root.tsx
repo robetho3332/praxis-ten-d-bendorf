@@ -36,6 +36,7 @@ export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
+      { name: "google-site-verification", content: "1KHQBvV8oPG9POvha4RwR5W8Qfi5853TBfRv6iwiFiw" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Praxis RBT — Naturheilkunde TEN Dübendorf" },
       { name: "description", content: "Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf." },
