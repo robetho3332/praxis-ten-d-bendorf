@@ -20,10 +20,21 @@ const faqs = [
     a: "Eine Beratung dauert in der Regel 60 Minuten. Stundenansatz: CHF 147.00 nach EMR-Tarif. Die Abrechnung erfolgt direkt mit dir, du reichst die Rechnung anschliessend bei deiner Zusatzversicherung ein.",
   },
   {
+    q: "Was ist ein Hormontest und wie funktioniert er?",
+    a: "Der Hormontest erfolgt in der Regel als Speicheltest, den du bequem zu Hause durchführst. Er misst freie, biologisch aktive Hormone wie Cortisol, Östrogen, Progesteron, Testosteron und DHEA über den Tagesverlauf. Die Proben werden ins Labor geschickt und liefern ein präzises Bild deines Hormonhaushalts.",
+  },
+  {
+    q: "Was macht ein Hormoncoach oder Hormonspezialist?",
+    a: "Als Hormoncoach und Hormonspezialistin begleite ich dich ganzheitlich: Wir analysieren deinen Hormonstatus, identifizieren Ungleichgewichte und erarbeiten gemeinsam einen Plan aus Ernährung, Pflanzenheilkunde, Lifestyle-Anpassungen und Vitalstoffen — abgestimmt auf dein Leben.",
+  },
+  {
     q: "Aus welchem Gebiet kommen deine Klientinnen und Klienten?",
     a: "Die Praxis liegt in Dübendorf an der Alten Gfennstrasse 86 und ist gut erreichbar aus Dübendorf, Volketswil, Uster, Schwerzenbach, Wangen-Brüttisellen, Wallisellen und der Stadt Zürich.",
   },
 ];
+
+
+
 
 export const Route = createFileRoute("/hormonberatung")({
   head: () => ({
