@@ -1,38 +1,60 @@
-## Was ich bereits geprüft habe
-- Der **Build selbst funktioniert**: In eurem Workflow laufen `bun install` und `bun run build` erfolgreich durch.
-- Der Fehler passiert **erst beim Schritt „Deploy to Cloudflare Workers“**.
-- Die gelbe Meldung zu **Node.js 20** ist **nur eine Warnung**, nicht die eigentliche Ursache.
-- Der Workflow verwendet diese GitHub-Secrets:
-  - `CLOUDFLARE_API_TOKEN`
-  - `CLOUDFLARE_ACCOUNT_ID`
+# Cloudflare-Redirect einrichten
 
-## Schritt für Schritt
-1. Öffne in GitHub den fehlgeschlagenen Lauf.
-2. Klicke auf den Job **deploy**.
-3. Klicke auf den Abschnitt **Deploy to Cloudflare Workers**.
-4. Klicke links auf das kleine Dreieck bei **„Running Wrangler Commands“** (Zeile 12 im Screenshot).
-5. Suche **unterhalb** der allgemeinen Meldung `failed with exit code 1` nach der **ersten konkreten roten Fehlermeldung**.
-6. Kopiere genau diese Meldung oder mache davon einen Screenshot.
+Keine Code-Änderung nötig — alles passiert in deinem Cloudflare-Dashboard. Dauer: ~10 Min.
 
-## Falls dort keine genauere Fehlermeldung sichtbar ist
-1. Gehe in GitHub zu **Settings → Secrets and variables → Actions**.
-2. Prüfe, ob diese beiden Secrets **exakt so geschrieben** vorhanden sind:
-   - `CLOUDFLARE_API_TOKEN`
-   - `CLOUDFLARE_ACCOUNT_ID`
-3. Wenn eines fehlt oder anders geschrieben ist, korrigieren.
-4. Danach zurück zu **Actions**.
-5. Den Workflow erneut starten mit **Re-run all jobs**.
+## Was du tun musst
 
-## Woran wir die Ursache erkennen
-- **Auth-/Permission-Fehler** → Token oder Rechte noch nicht korrekt
-- **Account-ID-Fehler** → falsche `CLOUDFLARE_ACCOUNT_ID`
-- **Wrangler-/Projektfehler** → Konfigurationsproblem beim Deploy
+### Schritt 1: Bei Cloudflare einloggen
+- Gehe auf https://dash.cloudflare.com
+- Wähle die Domain **naturheilkundepraxis-rbt.ch**
 
-## Technische Details
-- Workflow-Datei: `.github/workflows/cloudflare-deploy.yml`
-- Deploy-Befehl: `wrangler deploy`
-- Projektname in der Deploy-Konfiguration: `naturheilkundepraxis-rbt`
-- Aktuelle Worker-Config verwendet `wrangler.jsonc`
+### Schritt 2: Alte/störende DNS-Einträge prüfen
+- Linkes Menü → **DNS** → **Records**
+- Lösche alle bestehenden A-, AAAA- und CNAME-Einträge, die auf `@` oder `www` zeigen und mit dem alten Lovable-Versuch zu tun haben (NICHT MX-Einträge für E-Mail anfassen!)
+- Falls du unsicher bist: mach einen Screenshot und schick ihn mir, bevor du löschst
 
-## Ziel
-Sobald du mir die **konkrete Fehlermeldung aus „Running Wrangler Commands“** schickst, kann ich dir den **nächsten exakten Schritt** sagen.
+### Schritt 3: Dummy-DNS-Eintrag anlegen
+Damit Cloudflare überhaupt etwas zum Bearbeiten hat:
+- **Add record** klicken
+- Type: `A`
+- Name: `@`
+- IPv4 address: `192.0.2.1` (Dummy-IP, wird nie angesprochen)
+- Proxy status: **Proxied** (oranger Wolke ✓)
+- Save
+
+Gleiches nochmal für `www`:
+- Type: `A`, Name: `www`, IPv4: `192.0.2.1`, **Proxied**
+
+### Schritt 4: Redirect-Regel anlegen
+- Linkes Menü → **Rules** → **Redirect Rules** → **Create rule**
+- Rule name: `Redirect to Lovable`
+- **When incoming requests match:**
+  - Field: `Hostname`
+  - Operator: `equals`
+  - Value: `naturheilkundepraxis-rbt.ch`
+  - (Mit "Or" zweite Bedingung): Hostname equals `www.naturheilkundepraxis-rbt.ch`
+- **Then:**
+  - Type: `Static`
+  - URL: `https://naturheilkundepraxis-rbt.lovable.app`
+  - Status code: `301`
+  - Preserve query string: ✓ aktivieren
+- **Deploy** klicken
+
+### Schritt 5: SSL-Modus prüfen
+- Linkes Menü → **SSL/TLS** → **Overview**
+- Modus auf **Full** stellen (nicht "Flexible", nicht "Full strict")
+
+### Schritt 6: Testen
+- Warte 2–3 Minuten
+- Im Browser (Inkognito-Fenster!) öffnen:
+  - `https://naturheilkundepraxis-rbt.ch` → soll auf `.lovable.app` weiterleiten
+  - `https://www.naturheilkundepraxis-rbt.ch` → genauso
+- Falls Fehler 1034 weiter erscheint: Cache leeren oder 5 Min warten (DNS-Propagation)
+
+## Wenn etwas nicht klappt
+Schick mir einen Screenshot von:
+- der DNS-Records-Seite
+- der Redirect Rule
+- dem Fehler im Browser
+
+Dann debuggen wir gemeinsam.
