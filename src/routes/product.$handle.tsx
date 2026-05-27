@@ -3,9 +3,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/product/$handle")({
   head: () => ({
     meta: [
-      { title: "Shop — In Arbeit | Praxis RBT" },
-      { name: "description", content: "Unser Shop befindet sich aktuell in Arbeit." },
+      { title: "Produkt — Shop in Arbeit | Praxis RBT" },
+      { name: "description", content: "Die Produktseiten der Praxis RBT sind aktuell noch in Arbeit. Der Online-Shop wird bald für dich verfügbar sein." },
       { name: "robots", content: "noindex, nofollow" },
+      { property: "og:title", content: "Produkt — Shop in Arbeit | Praxis RBT" },
+      { property: "og:description", content: "Die Produktseiten der Praxis RBT sind aktuell noch in Arbeit. Der Online-Shop wird bald verfügbar sein." },
     ],
   }),
   component: ProductInProgress,

@@ -5,6 +5,8 @@ export const Route = createFileRoute("/datenschutz")({
     meta: [
       { title: "Datenschutz — Praxis RBT Dübendorf" },
       { name: "description", content: "Datenschutzerklärung der Praxis RBT – Romina Bertoletti Thoma, Naturheilkunde TEN in Dübendorf." },
+      { property: "og:title", content: "Datenschutz — Praxis RBT Dübendorf" },
+      { property: "og:description", content: "Datenschutzerklärung der Praxis RBT – Romina Bertoletti Thoma, Naturheilkunde TEN in Dübendorf." },
     ],
   }),
   component: DatenschutzPage,

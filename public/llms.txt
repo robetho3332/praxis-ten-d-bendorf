@@ -1,0 +1,9 @@
+# Praxis RBT — Naturheilkunde TEN Dübendorf
+
+> Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf. Angebote: Massage, Schröpfen, Pflanzenheilkunde, Ernährungsberatung und weitere ganzheitliche Therapien.
+
+## Pages
+
+- [Start](/): Übersicht der Praxis, Angebot, Abrechnung, Rabattcodes, über mich und Kontakt.
+- [Impressum](/impressum): Kontaktadresse, Haftungsausschluss, Urheberrechte.
+- [Datenschutz](/datenschutz): Datenschutzerklärung der Praxis RBT.

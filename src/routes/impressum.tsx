@@ -5,6 +5,8 @@ export const Route = createFileRoute("/impressum")({
     meta: [
       { title: "Impressum — Praxis RBT Dübendorf" },
       { name: "description", content: "Impressum der Praxis RBT – Romina Bertoletti Thoma, Naturheilkunde TEN in Dübendorf." },
+      { property: "og:title", content: "Impressum — Praxis RBT Dübendorf" },
+      { property: "og:description", content: "Impressum der Praxis RBT – Romina Bertoletti Thoma, Naturheilkunde TEN in Dübendorf." },
     ],
   }),
   component: ImpressumPage,

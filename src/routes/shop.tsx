@@ -4,8 +4,10 @@ export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
       { title: "Shop — In Arbeit | Praxis RBT" },
-      { name: "description", content: "Unser Shop befindet sich aktuell in Arbeit." },
+      { name: "description", content: "Mein Online-Shop der Praxis RBT in Dübendorf wird gerade vorbereitet und ist bald für dich verfügbar. Vielen Dank für deine Geduld." },
       { name: "robots", content: "noindex, nofollow" },
+      { property: "og:title", content: "Shop — In Arbeit | Praxis RBT" },
+      { property: "og:description", content: "Mein Online-Shop der Praxis RBT in Dübendorf wird gerade vorbereitet und ist bald für dich verfügbar." },
     ],
   }),
   component: ShopInProgress,
