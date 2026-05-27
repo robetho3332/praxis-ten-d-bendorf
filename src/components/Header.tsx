@@ -56,20 +56,6 @@ export function Header() {
               </a>
             ))}
             <Link
-              to="/massage"
-              className="text-sm font-medium tracking-wide text-foreground/70 transition-colors hover:text-primary"
-              activeProps={{ className: "!text-primary" }}
-            >
-              Massage
-            </Link>
-            <Link
-              to="/schroepfen"
-              className="text-sm font-medium tracking-wide text-foreground/70 transition-colors hover:text-primary"
-              activeProps={{ className: "!text-primary" }}
-            >
-              Schröpfen
-            </Link>
-            <Link
               to="/shop"
               className="text-sm font-medium tracking-wide text-foreground/70 transition-colors hover:text-primary"
               activeProps={{ className: "!text-primary" }}
@@ -113,22 +99,6 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <Link
-            to="/massage"
-            className="block text-sm font-medium text-foreground/70 hover:text-primary py-1"
-            activeProps={{ className: "!text-primary" }}
-            onClick={() => setMobileOpen(false)}
-          >
-            Massage
-          </Link>
-          <Link
-            to="/schroepfen"
-            className="block text-sm font-medium text-foreground/70 hover:text-primary py-1"
-            activeProps={{ className: "!text-primary" }}
-            onClick={() => setMobileOpen(false)}
-          >
-            Schröpfen
-          </Link>
           <Link
             to="/shop"
             className="block text-sm font-medium text-foreground/70 hover:text-primary py-1"
