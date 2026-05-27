@@ -29,10 +29,65 @@ import omnibioticLogo from "@/assets/logos/omnibiotic.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Praxis RBT — Naturheilkunde TEN & Manuelle Therapien in Dübendorf" },
+      { title: "Praxis RBT — Naturheilkunde TEN in Dübendorf" },
       { name: "description", content: "Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf. Massage, Schröpfen, Phytotherapie, Ernährungsberatung und mehr." },
       { property: "og:title", content: "Praxis RBT — Naturheilkunde TEN in Dübendorf" },
       { property: "og:description", content: "Ganzheitliche Naturheilkunde TEN & manuelle Therapien in Dübendorf." },
+      { property: "og:url", content: "https://naturheilkundepraxis-rbt.lovable.app/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://naturheilkundepraxis-rbt.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          name: "Praxis für manuelle Therapien & Naturheilkunde RBT",
+          description: "Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf.",
+          url: "https://naturheilkundepraxis-rbt.lovable.app/",
+          telephone: "+41794531716",
+          email: "r.bertolettithoma@icloud.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Alte Gfennstrasse 86",
+            postalCode: "8600",
+            addressLocality: "Dübendorf",
+            addressCountry: "CH",
+          },
+          founder: {
+            "@type": "Person",
+            name: "Romina Bertoletti Thoma",
+            jobTitle: "Eidg. dipl. Naturheilpraktikerin TEN",
+          },
+          medicalSpecialty: "Naturopathic",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Behandlungen",
+            itemListElement: [
+              "Massage",
+              "Ernährungsberatung",
+              "Pflanzenheilkunde",
+              "Schröpfen",
+              "Fussreflexzonen",
+              "Dorntherapie",
+              "Entgiftung",
+              "Darmsanierung",
+              "Hormonberatung",
+              "Vitalstoffberatung",
+              "Ohrreflextherapie",
+              "Schmerztherapie",
+              "Baunscheidtieren",
+              "Blutegeltherapie",
+              "Laboranalysen",
+            ].map((s) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "MedicalTherapy", name: s },
+            })),
+          },
+        }),
+      },
     ],
   }),
   component: HomePage,
