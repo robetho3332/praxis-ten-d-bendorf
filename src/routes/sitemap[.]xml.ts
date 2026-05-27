@@ -18,6 +18,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/massage", changefreq: "monthly", priority: "0.9" },
           { path: "/schroepfen", changefreq: "monthly", priority: "0.9" },
           { path: "/ernaehrungsberatung", changefreq: "monthly", priority: "0.9" },
+          { path: "/hormonberatung", changefreq: "monthly", priority: "0.9" },
           { path: "/shop", changefreq: "weekly", priority: "0.8" },
           { path: "/impressum", changefreq: "yearly", priority: "0.3" },
           { path: "/datenschutz", changefreq: "yearly", priority: "0.3" },
