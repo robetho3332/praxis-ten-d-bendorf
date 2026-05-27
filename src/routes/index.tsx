@@ -178,6 +178,7 @@ const services = [
     desc: "Ermittlung des Hormonhaushalts anhand Fragebogen und Speicheltest.",
     detail: "Sind ein Ungleichgewicht der Hormone verantwortlich für deine Beschwerden? Anhand eines Fragebogens und bei Bedarf einem Speicheltest, welcher bequem zu Hause durchgeführt werden kann, wird ermittelt wie es um deinen Hormonhaushalt steht.",
     bg: hormonberatungBg,
+    href: "/hormonberatung",
   },
   {
     title: "Vitalstoffberatung",
