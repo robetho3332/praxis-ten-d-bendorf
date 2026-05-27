@@ -352,11 +352,8 @@ function HomePage() {
                     <p className="text-sm text-muted-foreground leading-relaxed">{s.detail}</p>
                   </div>
                   {s.href && (
-                    <Link
-                      to={s.href}
-                      className="mt-3 inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90"
-                    >
-                      Mehr erfahren →
+                    <Link to={s.href} className="sr-only">
+                      Mehr erfahren über {s.title}
                     </Link>
                   )}
                 </div>
