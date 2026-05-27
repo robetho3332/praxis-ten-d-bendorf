@@ -14,6 +14,7 @@ import { Route as ShopRouteImport } from './routes/shop'
 import { Route as SchroepfenRouteImport } from './routes/schroepfen'
 import { Route as MassageRouteImport } from './routes/massage'
 import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as HormonberatungRouteImport } from './routes/hormonberatung'
 import { Route as ErnaehrungsberatungRouteImport } from './routes/ernaehrungsberatung'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
@@ -44,6 +45,11 @@ const ImpressumRoute = ImpressumRouteImport.update({
   path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HormonberatungRoute = HormonberatungRouteImport.update({
+  id: '/hormonberatung',
+  path: '/hormonberatung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ErnaehrungsberatungRoute = ErnaehrungsberatungRouteImport.update({
   id: '/ernaehrungsberatung',
   path: '/ernaehrungsberatung',
@@ -69,6 +75,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungsberatung': typeof ErnaehrungsberatungRoute
+  '/hormonberatung': typeof HormonberatungRoute
   '/impressum': typeof ImpressumRoute
   '/massage': typeof MassageRoute
   '/schroepfen': typeof SchroepfenRoute
@@ -80,6 +87,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungsberatung': typeof ErnaehrungsberatungRoute
+  '/hormonberatung': typeof HormonberatungRoute
   '/impressum': typeof ImpressumRoute
   '/massage': typeof MassageRoute
   '/schroepfen': typeof SchroepfenRoute
@@ -92,6 +100,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungsberatung': typeof ErnaehrungsberatungRoute
+  '/hormonberatung': typeof HormonberatungRoute
   '/impressum': typeof ImpressumRoute
   '/massage': typeof MassageRoute
   '/schroepfen': typeof SchroepfenRoute
@@ -105,6 +114,7 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/ernaehrungsberatung'
+    | '/hormonberatung'
     | '/impressum'
     | '/massage'
     | '/schroepfen'
@@ -116,6 +126,7 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/ernaehrungsberatung'
+    | '/hormonberatung'
     | '/impressum'
     | '/massage'
     | '/schroepfen'
@@ -127,6 +138,7 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/ernaehrungsberatung'
+    | '/hormonberatung'
     | '/impressum'
     | '/massage'
     | '/schroepfen'
@@ -139,6 +151,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ErnaehrungsberatungRoute: typeof ErnaehrungsberatungRoute
+  HormonberatungRoute: typeof HormonberatungRoute
   ImpressumRoute: typeof ImpressumRoute
   MassageRoute: typeof MassageRoute
   SchroepfenRoute: typeof SchroepfenRoute
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hormonberatung': {
+      id: '/hormonberatung'
+      path: '/hormonberatung'
+      fullPath: '/hormonberatung'
+      preLoaderRoute: typeof HormonberatungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ernaehrungsberatung': {
       id: '/ernaehrungsberatung'
       path: '/ernaehrungsberatung'
@@ -219,6 +239,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DatenschutzRoute: DatenschutzRoute,
   ErnaehrungsberatungRoute: ErnaehrungsberatungRoute,
+  HormonberatungRoute: HormonberatungRoute,
   ImpressumRoute: ImpressumRoute,
   MassageRoute: MassageRoute,
   SchroepfenRoute: SchroepfenRoute,
