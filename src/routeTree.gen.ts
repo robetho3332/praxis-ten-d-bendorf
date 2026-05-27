@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as SchroepfenRouteImport } from './routes/schroepfen'
+import { Route as MassageRouteImport } from './routes/massage'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
@@ -24,6 +26,16 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SchroepfenRoute = SchroepfenRouteImport.update({
+  id: '/schroepfen',
+  path: '/schroepfen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MassageRoute = MassageRouteImport.update({
+  id: '/massage',
+  path: '/massage',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ImpressumRoute = ImpressumRouteImport.update({
@@ -51,6 +63,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
+  '/massage': typeof MassageRoute
+  '/schroepfen': typeof SchroepfenRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/product/$handle': typeof ProductHandleRoute
@@ -59,6 +73,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
+  '/massage': typeof MassageRoute
+  '/schroepfen': typeof SchroepfenRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/product/$handle': typeof ProductHandleRoute
@@ -68,6 +84,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
+  '/massage': typeof MassageRoute
+  '/schroepfen': typeof SchroepfenRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/product/$handle': typeof ProductHandleRoute
@@ -78,6 +96,8 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/impressum'
+    | '/massage'
+    | '/schroepfen'
     | '/shop'
     | '/sitemap.xml'
     | '/product/$handle'
@@ -86,6 +106,8 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/impressum'
+    | '/massage'
+    | '/schroepfen'
     | '/shop'
     | '/sitemap.xml'
     | '/product/$handle'
@@ -94,6 +116,8 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/impressum'
+    | '/massage'
+    | '/schroepfen'
     | '/shop'
     | '/sitemap.xml'
     | '/product/$handle'
@@ -103,6 +127,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ImpressumRoute: typeof ImpressumRoute
+  MassageRoute: typeof MassageRoute
+  SchroepfenRoute: typeof SchroepfenRoute
   ShopRoute: typeof ShopRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ProductHandleRoute: typeof ProductHandleRoute
@@ -122,6 +148,20 @@ declare module '@tanstack/react-router' {
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schroepfen': {
+      id: '/schroepfen'
+      path: '/schroepfen'
+      fullPath: '/schroepfen'
+      preLoaderRoute: typeof SchroepfenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/massage': {
+      id: '/massage'
+      path: '/massage'
+      fullPath: '/massage'
+      preLoaderRoute: typeof MassageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/impressum': {
@@ -159,6 +199,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DatenschutzRoute: DatenschutzRoute,
   ImpressumRoute: ImpressumRoute,
+  MassageRoute: MassageRoute,
+  SchroepfenRoute: SchroepfenRoute,
   ShopRoute: ShopRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ProductHandleRoute: ProductHandleRoute,
