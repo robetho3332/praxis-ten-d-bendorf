@@ -16,12 +16,12 @@ function ShopInProgress() {
     <section className="section-padding min-h-[60vh] flex items-center justify-center">
       <div className="mx-auto max-w-xl text-center">
         <h1 className="font-heading text-3xl md:text-4xl font-semibold text-foreground">
-          Shop in Arbeit
+          Mein Online-Shop
         </h1>
         <div className="mt-4 h-0.5 w-16 bg-primary mx-auto mb-6" />
         <p className="text-muted-foreground leading-relaxed">
-          Unser Online-Shop wird gerade vorbereitet und ist bald für Sie verfügbar.
-          Vielen Dank für Ihre Geduld.
+          Mein Online-Shop wird gerade vorbereitet und ist bald für dich verfügbar.
+          Vielen Dank für deine Geduld.
         </p>
         <div className="mt-8">
           <Link
