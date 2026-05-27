@@ -1,23 +1,35 @@
-## Problem
+# Plan: Cloudflare-Deploy reparieren
 
-Der Build läuft durch, aber `wrangler deploy` schlägt fehl. Der Grund: das Workflow startet Wrangler im Repo-Root mit der `wrangler.jsonc`, die als `main` einen virtuellen Vite-Eintrag (`@tanstack/react-start/server-entry`) hat. Dieser existiert nur **während** des Builds. Nach `vite build` legt das Cloudflare-Plugin den fertigen Worker samt eigener `wrangler.json` in den `dist/`-Ordner — und genau von dort muss Wrangler deployen.
+## Ziel
+Der GitHub-Workflow soll erfolgreich nach Cloudflare deployen. Laut Screenshot baut das Projekt korrekt, aber der Deploy-Schritt zeigt auf den falschen Ordner.
 
-## Fix
+## Was ich ändern werde
+1. **Workflow auf den echten Build-Ordner umstellen**
+   - `workingDirectory` wird von `dist/naturheilkundepraxis-rbt` auf den tatsächlich erzeugten Ausgabeordner angepasst.
+   - Aus dem Screenshot ist klar: Es existieren nur `dist/client` und `dist/server`.
 
-`.github/workflows/cloudflare-deploy.yml` anpassen, sodass `wrangler-action` aus dem Build-Output-Verzeichnis deployt:
+2. **Deploy-Strategie passend zum Projekt prüfen**
+   - Ich passe den Workflow so an, dass Wrangler nicht in ein nicht vorhandenes Verzeichnis läuft.
+   - Falls für dieses TanStack/Cloudflare-Setup der Root-Deploy statt Unterordner-Deploy nötig ist, stelle ich den Workflow entsprechend um.
 
-```yaml
-- name: Deploy to Cloudflare Workers
-  uses: cloudflare/wrangler-action@v3
-  with:
-    apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-    accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-    workingDirectory: dist/naturheilkundepraxis-rbt
-    command: deploy
-```
+3. **Debug-Hinweis im Workflow sinnvoll belassen**
+   - Der Schritt zum Anzeigen des `dist/`-Inhalts bleibt erhalten oder wird leicht verbessert, damit künftige Fehler sofort sichtbar sind.
 
-Falls der tatsächliche Output-Pfad abweicht (manche Versionen nutzen `dist/server` oder `.output`), fügen wir zuvor einen Debug-Schritt `ls -la dist` hinzu und passen `workingDirectory` entsprechend an. Optional: Node auf 22 anheben (die Warnung „Node.js 20 deprecated").
+## Erwartetes Ergebnis
+- GitHub Actions läuft ohne den Fehler `Directory ... does not exist` durch.
+- Der Deploy-Schritt verwendet den richtigen Build-Pfad.
+- Du kannst den Workflow danach einfach erneut über GitHub starten.
+
+## Technische Details
+- Aktueller Fehler: `dist/naturheilkundepraxis-rbt` existiert nicht.
+- Tatsächliche Build-Ausgabe laut Screenshot:
+  - `dist/client`
+  - `dist/server`
+- Ursache: Der Workflow ist auf einen alten bzw. falschen Ordnernamen konfiguriert.
+- Relevante Dateien:
+  - `.github/workflows/cloudflare-deploy.yml`
+  - `wrangler.jsonc`
+  - `vite.config.ts` (nur falls der Deploy-Weg für dieses Setup angepasst werden muss)
 
 ## Danach
-
-Workflow erneut über **Actions → Run workflow** starten. Bei Erfolg ist die Site unter der Cloudflare-Workers-URL erreichbar.
+Nach der Umsetzung reicht ein neuer Run in GitHub Actions. Wenn der nächste Fehler dann aus einem anderen Schritt kommt, kann ich ihn gezielt auf Basis des neuen Logs beheben.
