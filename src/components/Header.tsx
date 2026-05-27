@@ -64,7 +64,7 @@ export function Header() {
             </Link>
           </nav>
 
-          <div className="hidden md:block absolute right-18">
+          <div className="hidden md:block absolute right-2">
             <CartDrawer />
           </div>
 
