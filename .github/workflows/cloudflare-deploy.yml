@@ -16,9 +16,11 @@ jobs:
         with:
           node-version: 22
 
-      - run: npm install
+      - uses: oven-sh/setup-bun@v2
 
-      - run: npm run build
+      - run: bun install --frozen-lockfile
+
+      - run: bun run build
 
       - name: Show build output
         run: ls -la dist || true
