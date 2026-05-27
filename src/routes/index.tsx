@@ -127,6 +127,7 @@ const services = [
     desc: "Klassische Massage bei Muskelverspannungen und Belastungen des Alltags.",
     detail: "Die klassische Massage ist die traditionellste und am meisten angewandte Massageform. Sie geht hauptsächlich auf die Belastungen des Alltags ein. Sie wirkt wunderbar bei Muskelverspannungen und deren Auswirkungen auf den gesamten Bewegungsapparat. Durch die in der Regel als entspannend empfundene Massage, ist auch ein positiver Einfluss auf die Psyche zu beobachten.",
     bg: massageBg,
+    href: "/massage",
   },
   {
     title: "Ernährungsberatung",
@@ -145,6 +146,7 @@ const services = [
     desc: "Einfluss auf innere Organe über Reflexzonen, Linderung bei Schmerzen.",
     detail: "Beim Schröpfen kann ich über die Reflexzonen des Rückens auf innere Organe Einfluss nehmen und diese unterstützen. Ausserdem kann direkt an Ort bei Schmerzen, Entzündungen, minder-und über- Durchblutung, Linderung verschafft werden. Die Schröpfkopfmassage lockert das Gewebe, regt die Durchblutung und den Stoffwechsel an.",
     bg: schroepfenBg,
+    href: "/schroepfen",
   },
   {
     title: "Fussreflexzonen",
@@ -346,9 +348,17 @@ function HomePage() {
                   }`}
                 >
                   <h3 className="font-heading text-lg font-semibold text-foreground mb-3">{s.title}</h3>
-                  <div className="overflow-y-auto max-h-[70%] w-full">
+                  <div className="overflow-y-auto max-h-[60%] w-full">
                     <p className="text-sm text-muted-foreground leading-relaxed">{s.detail}</p>
                   </div>
+                  {s.href && (
+                    <Link
+                      to={s.href}
+                      className="mt-3 inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90"
+                    >
+                      Mehr erfahren →
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
