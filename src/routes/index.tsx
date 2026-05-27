@@ -84,6 +84,12 @@ export const Route = createFileRoute("/")({
             propertyID: "EMR ZSR",
             value: "M100663",
           },
+          openingHoursSpecification: [
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "08:00", closes: "17:30" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "13:30", closes: "20:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "08:30", closes: "17:30" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "08:30", closes: "16:00" },
+          ],
           hasOfferCatalog: {
             "@type": "OfferCatalog",
             name: "Behandlungen",
