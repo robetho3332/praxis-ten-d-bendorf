@@ -134,6 +134,7 @@ const services = [
     desc: "Pflanzenbasierte Ernährungsberatung und Optimierung deiner Essgewohnheiten.",
     detail: "Um funktionieren zu können, braucht unser Körper Nährstoffe – Makronährstoffe wie Fette, Eiweisse und Kohlenhydrate sowie Mikronährstoffe wie Vitamine, Mineralstoffe, Spurenelemente und sekundäre Pflanzenstoffe. In meiner Ernährungsberatung schauen wir uns deine Essgewohnheiten an und besprechen anhand deiner Ziele, was und wie du diese optimieren kannst.",
     bg: ernaehrungBg,
+    href: "/ernaehrungsberatung",
   },
   {
     title: "Pflanzenheilkunde",
