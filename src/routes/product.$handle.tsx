@@ -26,8 +26,6 @@ const productQueryOptions = (handle: string) =>
   });
 
 export const Route = createFileRoute("/product/$handle")({
-  loader: ({ context, params }) =>
-    context.queryClient.ensureQueryData(productQueryOptions(params.handle)),
   head: ({ loaderData }) => {
     const p = loaderData as ShopifyProductNode | undefined;
     if (!p) {

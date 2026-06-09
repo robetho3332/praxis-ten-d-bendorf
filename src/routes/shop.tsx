@@ -38,7 +38,7 @@ export const Route = createFileRoute("/shop")({
       },
     ],
   }),
-  loader: ({ context }) => context.queryClient.ensureQueryData(productsQueryOptions),
+  
   component: ShopPage,
   errorComponent: ({ error }) => (
     <div className="section-padding text-center">
