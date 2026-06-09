@@ -55,13 +55,9 @@ function ShopPage() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center mb-12">
           <h1 className="font-heading text-3xl md:text-4xl font-semibold text-foreground">
-            Mein Online-Shop
+            Online Shop
           </h1>
           <div className="mt-4 h-0.5 w-16 bg-primary mx-auto" />
-          <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            Sorgfältig ausgewählte Naturheilprodukte, ätherische Öle und Nahrungsergänzungen,
-            die ich in meiner Praxis schätze und gerne weiterempfehle.
-          </p>
         </div>
 
         {products.length === 0 ? (
