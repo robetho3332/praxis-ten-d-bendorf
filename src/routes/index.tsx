@@ -96,6 +96,7 @@ export const Route = createFileRoute("/")({
             itemListElement: [
               { name: "Medizinische Massage", url: "https://naturheilkundepraxis-rbt.lovable.app/massage" },
               { name: "Ernährungsberatung", url: "https://naturheilkundepraxis-rbt.lovable.app/ernaehrungsberatung" },
+              { name: "Gesichtspflege mit Farfalla Naturkosmetik", url: "https://naturheilkundepraxis-rbt.lovable.app/gesichtspflege" },
               { name: "Pflanzenheilkunde" },
               { name: "Schröpfen", url: "https://naturheilkundepraxis-rbt.lovable.app/schroepfen" },
               { name: "Fussreflexzonen" },
