@@ -30,14 +30,14 @@ Aufgebaut wie deine bestehenden Behandlungsseiten:
 - Eintrag in `llms.txt`
 - Neuer Eintrag „Gesichtspflege" im LocalBusiness-Schema der Startseite mit URL
 
-## Was ich von dir brauche
+## Deine Angaben, die auf der Seite stehen
 
-Damit die Seite keine erfundenen Angaben enthält, brauche ich:
-- Behandlungsdauer und Preis (z. B. 60 Min. / CHF …)
-- Welche Farfalla-Linien du verwendest
-- Ob die Behandlung über die Krankenkasse (EMR) abrechenbar ist oder Privatleistung
+- Dauer: 75–90 Minuten
+- Preis: CHF 140.–
+- Produkte: Farfalla Naturkosmetik aus Uster, Schweiz
+- Keine Erwähnung der Krankenkassen-Abrechnung (Privatleistung, wird nicht thematisiert)
 
-Fehlt etwas, lasse ich die Angabe weg statt sie zu erfinden — du kannst sie später nachliefern.
+Dauer und Preis kommen zusätzlich in das `Offer`-Schema der Seite, damit Google sie direkt versteht. Weitere Angaben erfinde ich nicht.
 
 ## Technische Details
 
