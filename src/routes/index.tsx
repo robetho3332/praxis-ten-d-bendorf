@@ -19,6 +19,7 @@ import ohrreflextherapieBg from "@/assets/ohrreflextherapie-bg.jpg";
 import schmerztherapieBg from "@/assets/schmerztherapie-bg.jpg";
 import baunscheidtierenBg from "@/assets/baunscheidtieren-bg.jpg";
 import laboranalysenBg from "@/assets/laboranalysen-bg.jpg";
+import gesichtspflegeBg from "@/assets/gesichtspflege-bg.jpg";
 import farfallaLogo from "@/assets/logos/farfalla.png";
 import kingnatureLogo from "@/assets/logos/kingnature.png";
 import sundayLogo from "@/assets/logos/sunday.png";
