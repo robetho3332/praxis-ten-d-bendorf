@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Praxis RBT — Naturheilkunde TEN in Dübendorf" },
-      { name: "description", content: "Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf. Massage, Schröpfen, Phytotherapie, Ernährungsberatung und mehr." },
+      { name: "description", content: "Praxis für manuelle Therapien & Naturheilkunde TEN von Romina Bertoletti Thoma in Dübendorf. Medizinische Massage, Schröpfen, Phytotherapie, Ernährungsberatung und mehr." },
       { property: "og:title", content: "Praxis RBT — Naturheilkunde TEN in Dübendorf" },
       { property: "og:description", content: "Ganzheitliche Naturheilkunde TEN & manuelle Therapien in Dübendorf." },
       { property: "og:url", content: "https://naturheilkundepraxis-rbt.lovable.app/" },
