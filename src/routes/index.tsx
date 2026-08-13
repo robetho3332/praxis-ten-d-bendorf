@@ -143,13 +143,6 @@ const services = [
     href: "/ernaehrungsberatung",
   },
   {
-    title: "Gesichtspflege",
-    desc: "Ganzheitliche Gesichtsbehandlung mit Farfalla Naturkosmetik.",
-    detail: "Eine ruhige Gesichtsbehandlung mit Farfalla Naturkosmetik aus Uster: Hautanalyse, sanfte Reinigung, typgerechtes Peeling, Gesichts-, Hals- und Dekolleté-Massage, Wirkstoff-Maske und abschliessende Pflege. Dauer 75–90 Minuten, CHF 140.–. Individuell auf deinen Hauttyp abgestimmt, inklusive Empfehlungen für die Pflege zu Hause.",
-    bg: gesichtspflegeBg,
-    href: "/gesichtspflege",
-  },
-  {
     title: "Pflanzenheilkunde",
     desc: "Tinkturen, Tees und pulverisierte Pflanzenteile, individuell abgestimmt.",
     detail: "«Gegen jede Krankheit ist ein Kraut gewachsen» – Seit Jahrhunderten ist die Pflanzenheilkunde Teil der Therapien auf der ganzen Welt. Tinkturen, Tees und pulverisierte Pflanzenteile sind oft Teil meines individuell auf dich abgestimmten Therapiekonzepts.",
