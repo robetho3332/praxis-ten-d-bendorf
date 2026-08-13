@@ -16,6 +16,33 @@ export function Footer() {
           </p>
         </div>
 
+        <nav aria-label="Behandlungen" className="mt-10 text-center">
+          <h2 className="text-sm font-semibold text-primary-foreground/90">Behandlungen in Dübendorf</h2>
+          <ul className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-primary-foreground/80">
+            <li>
+              <Link to="/massage" className="hover:text-primary-foreground transition-colors underline">
+                Medizinische Massage Dübendorf
+              </Link>
+            </li>
+            <li>
+              <Link to="/schroepfen" className="hover:text-primary-foreground transition-colors underline">
+                Schröpfen Dübendorf
+              </Link>
+            </li>
+            <li>
+              <Link to="/ernaehrungsberatung" className="hover:text-primary-foreground transition-colors underline">
+                Ernährungsberatung Dübendorf
+              </Link>
+            </li>
+            <li>
+              <Link to="/hormonberatung" className="hover:text-primary-foreground transition-colors underline">
+                Hormonberatung Dübendorf
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+
         <div className="mt-10 pt-6 border-t border-primary-foreground/20 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-primary-foreground/60">
           <span>© {new Date().getFullYear()} Romina Bertoletti Thoma. Alle Rechte vorbehalten.</span>
           <div className="flex gap-4">
