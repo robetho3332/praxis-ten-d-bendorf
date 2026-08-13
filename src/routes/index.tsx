@@ -222,6 +222,13 @@ const services = [
     detail: "Viele Erkrankungen lassen sich mithilfe der Labordiagnostik sehr sicher erkennen. Daher ergänze ich deine Anamnese bei Bedarf durch eine Laboruntersuchung. Dazu arbeite ich eng mit dem Labor Ortho-Analytic AG zusammen.",
     bg: laboranalysenBg,
   },
+  {
+    title: "Gesichtspflege",
+    desc: "Ganzheitliche Gesichtsbehandlung mit Farfalla Naturkosmetik.",
+    detail: "Eine ruhige Gesichtsbehandlung mit Farfalla Naturkosmetik aus Uster: Hautanalyse, sanfte Reinigung, typgerechtes Peeling, Gesichts-, Hals- und Dekolleté-Massage, Wirkstoff-Maske und abschliessende Pflege. Dauer 75–90 Minuten, CHF 140.–. Individuell auf deinen Hauttyp abgestimmt, inklusive Empfehlungen für die Pflege zu Hause.",
+    bg: gesichtspflegeBg,
+    href: "/gesichtspflege",
+  },
 ];
 
 const ablaufSteps = [
