@@ -35,6 +35,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link to="/gesichtspflege" className="hover:text-primary-foreground transition-colors underline">
+                Gesichtspflege Dübendorf
+              </Link>
+            </li>
+            <li>
               <Link to="/hormonberatung" className="hover:text-primary-foreground transition-colors underline">
                 Hormonberatung Dübendorf
               </Link>

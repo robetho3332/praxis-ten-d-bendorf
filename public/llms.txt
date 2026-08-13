@@ -5,5 +5,10 @@
 ## Pages
 
 - [Start](/): Übersicht der Praxis, Angebot, Abrechnung, Rabattcodes, über mich und Kontakt.
+- [Massage](/massage): Medizinische Massage in Dübendorf.
+- [Schröpfen](/schroepfen): Schröpfen und Schröpfmassage in Dübendorf.
+- [Ernährungsberatung](/ernaehrungsberatung): Ernährungsberatung in Dübendorf.
+- [Hormonberatung](/hormonberatung): Hormonberatung in Dübendorf.
+- [Gesichtspflege](/gesichtspflege): Ganzheitliche Gesichtsbehandlung mit Farfalla Naturkosmetik, 75–90 Minuten, CHF 140.–.
 - [Impressum](/impressum): Kontaktadresse, Haftungsausschluss, Urheberrechte.
 - [Datenschutz](/datenschutz): Datenschutzerklärung der Praxis RBT.

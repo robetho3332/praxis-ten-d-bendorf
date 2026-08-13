@@ -19,6 +19,7 @@ import ohrreflextherapieBg from "@/assets/ohrreflextherapie-bg.jpg";
 import schmerztherapieBg from "@/assets/schmerztherapie-bg.jpg";
 import baunscheidtierenBg from "@/assets/baunscheidtieren-bg.jpg";
 import laboranalysenBg from "@/assets/laboranalysen-bg.jpg";
+import gesichtspflegeBg from "@/assets/gesichtspflege-bg.jpg";
 import farfallaLogo from "@/assets/logos/farfalla.png";
 import kingnatureLogo from "@/assets/logos/kingnature.png";
 import sundayLogo from "@/assets/logos/sunday.png";
@@ -96,6 +97,7 @@ export const Route = createFileRoute("/")({
             itemListElement: [
               { name: "Medizinische Massage", url: "https://naturheilkundepraxis-rbt.lovable.app/massage" },
               { name: "Ernährungsberatung", url: "https://naturheilkundepraxis-rbt.lovable.app/ernaehrungsberatung" },
+              { name: "Gesichtspflege mit Farfalla Naturkosmetik", url: "https://naturheilkundepraxis-rbt.lovable.app/gesichtspflege" },
               { name: "Pflanzenheilkunde" },
               { name: "Schröpfen", url: "https://naturheilkundepraxis-rbt.lovable.app/schroepfen" },
               { name: "Fussreflexzonen" },
@@ -139,6 +141,13 @@ const services = [
     detail: "Um funktionieren zu können, braucht unser Körper Nährstoffe – Makronährstoffe wie Fette, Eiweisse und Kohlenhydrate sowie Mikronährstoffe wie Vitamine, Mineralstoffe, Spurenelemente und sekundäre Pflanzenstoffe. In meiner Ernährungsberatung schauen wir uns deine Essgewohnheiten an und besprechen anhand deiner Ziele, was und wie du diese optimieren kannst.",
     bg: ernaehrungBg,
     href: "/ernaehrungsberatung",
+  },
+  {
+    title: "Gesichtspflege",
+    desc: "Ganzheitliche Gesichtsbehandlung mit Farfalla Naturkosmetik.",
+    detail: "Eine ruhige Gesichtsbehandlung mit Farfalla Naturkosmetik aus Uster: Hautanalyse, sanfte Reinigung, typgerechtes Peeling, Gesichts-, Hals- und Dekolleté-Massage, Wirkstoff-Maske und abschliessende Pflege. Dauer 75–90 Minuten, CHF 140.–. Individuell auf deinen Hauttyp abgestimmt, inklusive Empfehlungen für die Pflege zu Hause.",
+    bg: gesichtspflegeBg,
+    href: "/gesichtspflege",
   },
   {
     title: "Pflanzenheilkunde",
