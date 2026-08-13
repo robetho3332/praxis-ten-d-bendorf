@@ -225,7 +225,7 @@ const services = [
   {
     title: "Gesichtspflege",
     desc: "Ganzheitliche Gesichtsbehandlung mit Farfalla Naturkosmetik.",
-    detail: "Eine ruhige Gesichtsbehandlung mit Farfalla Naturkosmetik aus Uster: Hautanalyse, sanfte Reinigung, typgerechtes Peeling, Gesichts-, Hals- und Dekolleté-Massage, Wirkstoff-Maske und abschliessende Pflege. Dauer 75–90 Minuten, CHF 140.–. Individuell auf deinen Hauttyp abgestimmt, inklusive Empfehlungen für die Pflege zu Hause.",
+    detail: "Eine ruhige Gesichtsbehandlung mit Farfalla Naturkosmetik aus Uster: Hautanalyse, sanfte Reinigung, Peeling mit Dampf, manuelle Ausreinigung, Gesichts-, Hals- und Dekolleté-Massage, Wirkstoff-Maske und abschliessende Pflege. Dauer 75–90 Minuten, CHF 140.–. Individuell auf deinen Hauttyp abgestimmt, inklusive Empfehlungen für die Pflege zu Hause.",
     bg: gesichtspflegeBg,
     href: "/gesichtspflege",
   },

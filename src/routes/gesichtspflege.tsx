@@ -5,7 +5,7 @@ const CANONICAL = "https://naturheilkundepraxis-rbt.lovable.app/gesichtspflege";
 const faqs = [
   {
     q: "Wie lange dauert eine Gesichtsbehandlung?",
-    a: "Die Behandlung dauert 75 bis 90 Minuten und kostet CHF 140.–. Genug Zeit für Reinigung, Peeling, Gesichts- und Dekolleté-Massage, Maske und Pflegeabschluss – ohne Hektik.",
+    a: "Die Behandlung dauert 75 bis 90 Minuten und kostet CHF 140.–. Genug Zeit für Hautanalyse, Reinigung, Peeling mit Dampf, manuelle Ausreinigung, Gesichts-, Hals- und Dekolleté-Massage, Wirkstoff-Maske und Pflegeabschluss – ohne Hektik.",
   },
   {
     q: "Welche Produkte verwendest du?",
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "Ist Naturkosmetik für empfindliche Haut geeignet?",
-    a: "Ja. Ich stimme Reinigung, Peeling, Maske und Pflege auf deinen Hauttyp ab und arbeite bei empfindlicher oder zu Rötungen neigender Haut mit milderen Wirkstoffen und ohne intensives Peeling.",
+    a: "Ja. Ich stimme Reinigung, Peeling, Maske und Pflege auf deinen Hauttyp ab und arbeite bei empfindlicher oder zu Rötungen neigender Haut mit milderen Wirkstoffen, sanfterem Dampf und ohne intensive Ausreinigung.",
   },
   {
     q: "Was passiert bei der ersten Behandlung?",
@@ -40,13 +40,13 @@ export const Route = createFileRoute("/gesichtspflege")({
       {
         name: "description",
         content:
-          "Gesichtsbehandlung in Dübendorf mit Farfalla Naturkosmetik aus Uster. 75–90 Minuten für CHF 140.–, individuell auf deinen Hauttyp abgestimmt. Praxis RBT, Romina Bertoletti Thoma.",
+          "Gesichtsbehandlung in Dübendorf mit Farfalla Naturkosmetik aus Uster: Peeling mit Dampf, manuelle Ausreinigung, Massage und Maske. 75–90 Minuten für CHF 140.–. Praxis RBT, Romina Bertoletti Thoma.",
       },
       { property: "og:title", content: "Gesichtspflege in Dübendorf — Naturkosmetik mit Farfalla" },
       {
         property: "og:description",
         content:
-          "Ganzheitliche Gesichtsbehandlung mit Farfalla Naturkosmetik: Reinigung, Peeling, Massage, Maske. 75–90 Minuten, CHF 140.–.",
+          "Ganzheitliche Gesichtsbehandlung mit Farfalla Naturkosmetik: Reinigung, Peeling mit Dampf, manuelle Ausreinigung, Massage, Maske. 75–90 Minuten, CHF 140.–.",
       },
       { property: "og:url", content: CANONICAL },
       { property: "og:type", content: "article" },
@@ -61,7 +61,7 @@ export const Route = createFileRoute("/gesichtspflege")({
           name: "Gesichtspflege mit Farfalla Naturkosmetik",
           alternateName: ["Gesichtsbehandlung", "Naturkosmetik Gesichtspflege", "Kosmetische Gesichtsbehandlung"],
           description:
-            "Ganzheitliche Gesichtsbehandlung in Dübendorf mit Farfalla Naturkosmetik aus Uster: Hautanalyse, Reinigung, Peeling, Gesichts- und Dekolleté-Massage, Maske und Pflegeabschluss. Dauer 75–90 Minuten.",
+            "Ganzheitliche Gesichtsbehandlung in Dübendorf mit Farfalla Naturkosmetik aus Uster: Hautanalyse, sanfte Reinigung, Peeling mit Dampf, manuelle Ausreinigung, Gesichts-, Hals- und Dekolleté-Massage, Wirkstoff-Maske und abschliessende Pflege. Dauer 75–90 Minuten.",
           url: CANONICAL,
           serviceType: "Gesichtsbehandlung",
           areaServed: [
@@ -122,7 +122,7 @@ function GesichtspflegePage() {
             <div className="rounded-lg border border-border bg-card p-6">
               <h2 className="font-heading text-base font-semibold text-foreground">75–90 Minuten</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Genug Zeit für Hautanalyse, Reinigung, Peeling, Massage, Maske und Pflegeabschluss.
+                Genug Zeit für Hautanalyse, Reinigung, Peeling mit Dampf, Ausreinigung, Massage, Maske und Pflege.
               </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-6">
@@ -154,7 +154,8 @@ function GesichtspflegePage() {
             <ul className="mt-6 space-y-2 text-muted-foreground">
               <li>• Hautanalyse und kurzes Gespräch zu Pflege, Ernährung und Belastungen</li>
               <li>• Sanfte, typgerechte Reinigung</li>
-              <li>• Peeling, abgestimmt auf die Empfindlichkeit deiner Haut</li>
+              <li>• Peeling mit Dampf, abgestimmt auf die Empfindlichkeit deiner Haut</li>
+              <li>• Manuelle Ausreinigung bei Bedarf</li>
               <li>• Gesichts-, Hals- und Dekolleté-Massage zur Anregung von Durchblutung und Lymphfluss</li>
               <li>• Wirkstoff-Maske mit Ruhephase</li>
               <li>• Abschliessende Pflege mit Serum und Creme</li>
